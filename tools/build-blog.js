@@ -193,6 +193,12 @@ function faqSchema(md) {
 const CSS = `
   body{margin:0;background:#fff;color:#12293F;font-family:Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
   .wrap{max-width:1200px;margin-inline:auto;padding-inline:1.25rem}
+  .hdr-row{height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+  .hdr-brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;white-space:nowrap}
+  .hdr-nav{display:flex;align-items:center;gap:.5rem;font-weight:700;font-size:14.5px;white-space:nowrap}
+  .hdr-nav a{color:#24506F;text-decoration:none;padding:.5rem .75rem}
+  .hdr-nav .hdr-cta{background:#1EA453;color:#fff;padding:.6rem 1rem;border-radius:12px;font-weight:800}
+  @media (max-width:720px){.hdr-nav a.opt{display:none}.hdr-nav{gap:.25rem}}
   .article{max-width:760px;margin-inline:auto;padding:2.5rem 1.25rem 4rem}
   .article p{font-size:17px;line-height:1.75;margin:0 0 1.15rem}
   .article h2{font-family:"Plus Jakarta Sans",Manrope,sans-serif;font-size:clamp(1.45rem,3.6vw,2rem);font-weight:800;color:#0B1F33;margin:2.75rem 0 1rem;line-height:1.25}
@@ -268,15 +274,15 @@ ${faq ? '<script type="application/ld+json">' + JSON.stringify(faq) + '<\/script
 <body>
 
 <header style="position:sticky;top:0;z-index:10;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid #E2E8F0">
-  <div class="wrap" style="height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem">
-    <a href="${HOME}" style="display:flex;align-items:center;gap:.6rem;text-decoration:none">
+  <div class="wrap hdr-row">
+    <a href="${HOME}" class="hdr-brand" style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;color:#0B1F33">
       <img src="${ASSET}images/logo-mark.png" width="34" height="34" alt="Logo binarumah.site" style="width:34px;height:34px;display:block">
-      <span style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;color:#0B1F33">binarumah<span style="color:#DB8601">.site</span></span>
+      <span>binarumah<span style="color:#DB8601">.site</span></span>
     </a>
-    <nav style="display:flex;align-items:center;gap:.5rem;font-weight:700;font-size:14.5px">
-      <a href="${HOME}#kira-kos" style="color:#24506F;text-decoration:none;padding:.5rem .75rem">Pakej &amp; Harga</a>
-      <a href="${HOME}#portfolio" style="color:#24506F;text-decoration:none;padding:.5rem .75rem">Portfolio</a>
-      <a href="${WA}?text=Assalamualaikum%2C%20saya%20nak%20sebut%20harga%20bina%20rumah%20di%20${encodeURIComponent(fm.district)}" style="background:#1EA453;color:#fff;text-decoration:none;padding:.6rem 1rem;border-radius:12px;font-weight:800">Sebut Harga Percuma</a>
+    <nav class="hdr-nav">
+      <a class="opt" href="${HOME}#kira-kos">Pakej &amp; Harga</a>
+      <a class="opt" href="${HOME}#portfolio">Portfolio</a>
+      <a class="hdr-cta" href="${WA}?text=Assalamualaikum%2C%20saya%20nak%20sebut%20harga%20bina%20rumah%20di%20${encodeURIComponent(fm.district)}">Sebut Harga Percuma</a>
     </nav>
   </div>
 </header>

@@ -1,5 +1,11 @@
 body{margin:0;background:#fff;color:#12293F;font-family:Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
   .wrap{max-width:1200px;margin-inline:auto;padding-inline:1.25rem}
+  .hdr-row{height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+  .hdr-brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;white-space:nowrap}
+  .hdr-nav{display:flex;align-items:center;gap:.5rem;font-weight:700;font-size:14.5px;white-space:nowrap}
+  .hdr-nav a{color:#24506F;text-decoration:none;padding:.5rem .75rem}
+  .hdr-nav .hdr-cta{background:#1EA453;color:#fff;padding:.6rem 1rem;border-radius:12px;font-weight:800}
+  @media (max-width:720px){.hdr-nav a.opt{display:none}.hdr-nav{gap:.25rem}}
   .article{max-width:760px;margin-inline:auto;padding:2.5rem 1.25rem 4rem}
   .article p{font-size:17px;line-height:1.75;margin:0 0 1.15rem}
   .article h2{font-family:"Plus Jakarta Sans",Manrope,sans-serif;font-size:clamp(1.45rem,3.6vw,2rem);font-weight:800;color:#0B1F33;margin:2.75rem 0 1rem;line-height:1.25}

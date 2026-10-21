@@ -1,0 +1,6 @@
+# Fail sistem & alat sahaja — bukan sebahagian laman
+.DS_Store
+Thumbs.db
+desktop.ini
+node_modules/
+*.log

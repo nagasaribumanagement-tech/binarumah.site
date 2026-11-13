@@ -25,9 +25,11 @@ const WA_NUMBER = '601155919344'; // 011-5591 9344
 const WA_DISPLAY = '+60 11-5591 9344';
 const FB = 'https://www.facebook.com/tukangrumahidaman';
 const TIKTOK = 'https://www.tiktok.com/@nsm.rumah.idaman';
+const IG = 'https://www.instagram.com/nsmdesignbuild';
 const COMPANY = 'Nagasaribu Management';
 const EMAIL = 'sales@nagasaribu.online';
 const ADDRESS = 'No. 2-105, Jalan Prima SG 3/2, Prima Seri Gombak, 68100 Batu Caves, Selangor';
+const HOURS = 'Isnin – Jumaat, 9:00 pagi – 5:00 petang';
 const BRAND = 'binarumah.site';
 const BASE_ARG = process.argv.find(a => a.startsWith('--base='));
 const HOME = BASE_ARG ? BASE_ARG.split('=')[1].replace(/\/$/, '') + '/index.html' : '../index.html';
@@ -231,7 +233,7 @@ function page(fm, bodyHtml, faq) {
     datePublished: fm.date,
     dateModified: fm.date,
     author: { '@type': 'Organization', name: BRAND, url: SITE + '/', legalName: COMPANY, email: EMAIL },
-    publisher: { '@type': 'Organization', name: BRAND, url: SITE + '/', legalName: COMPANY, email: EMAIL, sameAs: [FB, TIKTOK] },
+    publisher: { '@type': 'Organization', name: BRAND, url: SITE + '/', legalName: COMPANY, email: EMAIL, sameAs: [FB, TIKTOK, IG] },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
     url: url
   };
@@ -319,13 +321,17 @@ ${bodyHtml}
 
 <footer style="background:#0B1F33;color:#94A3B8">
   <div class="wrap" style="padding:1.5rem 1.25rem;display:flex;flex-wrap:wrap;gap:.75rem;justify-content:space-between;font-size:13.5px">
-    <p style="margin:0">© ${new Date().getFullYear()} ${BRAND} · ${COMPANY} · WhatsApp ${WA_DISPLAY}</p>
+    <p style="margin:0">© ${new Date().getFullYear()} ${BRAND} · ${COMPANY} · WhatsApp <a href="${WA}" target="_blank" rel="noopener" style="color:#E2E8F0">${WA_DISPLAY}</a></p>
     <p style="margin:0"><a href="${FB}" target="_blank" rel="noopener" style="color:#E2E8F0">Facebook · Tukang Rumah Idaman</a></p>
     <p style="margin:0"><a href="${TIKTOK}" target="_blank" rel="noopener" style="color:#E2E8F0">TikTok · nsm.rumah.idaman</a></p>
+    <p style="margin:0"><a href="${IG}" target="_blank" rel="noopener" style="color:#E2E8F0">Instagram · nsmdesignbuild</a></p>
     <p style="margin:0"><a href="${HOME}" style="color:#E2E8F0">Kembali ke laman utama</a></p>
   </div>
   <div class="wrap" style="padding:0 1.25rem 1.5rem;font-size:13px;color:#7C8B9C;max-width:860px">
-    Pejabat: ${ADDRESS} · <a href="mailto:${EMAIL}" style="color:#9FB3C8">${EMAIL}</a>
+    Pejabat: ${ADDRESS} · <a href="mailto:${EMAIL}" style="color:#9FB3C8">${EMAIL}</a> ·
+    <a href="/privacy" style="color:#9FB3C8">Dasar Privasi</a> ·
+    <a href="/terms" style="color:#9FB3C8">Terma &amp; Syarat</a><br>
+    Waktu operasi: ${HOURS}.
   </div>
 </footer>
 

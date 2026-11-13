@@ -21,7 +21,7 @@ Kerana Shah Alam merupakan bandar raya dengan piawaian perancangan yang ketat, p
 MBSA menggunakan sistem e-lulus dan mempunyai garis panduan reka bentuk yang cukup jelas. Untuk rumah atas tanah sendiri, dokumen berikut biasanya diperlukan:
 
 - Geran tanah atau surat kuasa yang sah, berserta bil cukai tanah dan assessment semasa
-- Gambaranajah daripada juruukur berdaftar yang mengesahkan sempadan dan keluasan lot
+- Gambar rajah / pelan tanah daripada juruukur berdaftar yang mengesahkan sempadan dan keluasan lot
 - Pelan arkitek lengkap ditandatangani arkitek berdaftar (PAM/LAM)
 - Pelan struktur, pelan aliran elektrik dan pelan paip/saliran ditandatangani jurutera berdaftar (BEM)
 - Laporan ujian tanah, wajib bagi rumah dua tingkat dan tapak yang berada dekat saliran utama

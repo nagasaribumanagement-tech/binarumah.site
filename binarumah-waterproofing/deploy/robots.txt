@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Laman binarumah.site — Nagasaribu Management, Batu Caves, Selangor
+
+Sitemap: https://binarumah.site/sitemap.xml

@@ -21,7 +21,7 @@ Walau bagaimanapun, Sepang mempunyai peraturan khas yang tidak wujud di daerah l
 Sepang dikendalikan oleh **Majlis Perbandaran Sepang (MPSepang)**, dengan beberapa kawasan perindustrian dan khas yang dirujuk kepada agensi berkaitan. Dokumen asas yang diperlukan untuk permohonan pelan bangunan rumah kediaman:
 
 - Geran tanah berserta endorsement semasa, bil cukai tanah dan assessment
-- Gambaranajah daripada juruukur berdaftar yang mengesahkan sempadan, luas lot dan paras tapak
+- Gambar rajah / pelan tanah daripada juruukur berdaftar yang mengesahkan sempadan, luas lot dan paras tapak
 - Pelan arkitek lengkap termasuk pelan tapak, kenaikan, keratan dan senarai ruang
 - Pelan struktur, pelan paip dan pendawaian elektrik ditandatangani jurutera berdaftar (BEM)
 - Laporan ujian tanah untuk rumah dua tingkat atau tapak bertanah lembut

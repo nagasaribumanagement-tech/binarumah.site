@@ -1,6 +1,10 @@
-# Fail sistem & alat sahaja — bukan sebahagian laman
+# Fail sistem & alat sahaja - bukan sebahagian laman
 .DS_Store
 Thumbs.db
 desktop.ini
 node_modules/
 *.log
+
+# Artifak deploy / wrangler - jangan commit
+*.zip
+.wrangler/

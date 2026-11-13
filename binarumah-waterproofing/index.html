@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ms" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- DEMO homepage: jangan index halaman demo ini. -->
+<meta name="robots" content="noindex, nofollow">
+<title>Demo — Kemas Kini Header &amp; Perkhidmatan | binarumah.site</title>
+<meta name="description" content="Demo visual kemas kini menu navigasi dan seksyen Perkhidmatan Utama binarumah.site.">
+<meta name="theme-color" content="#0B1F33">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/waterproofing.css">
+</head>
+
+<body class="font-sans antialiased bg-white text-brand-800">
+<a href="#kandungan" class="skip-link">Langkau ke kandungan</a>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="wrap header-row">
+    <a href="index.html" class="brand" aria-label="binarumah.site — laman utama">
+      <span class="brand__mark" aria-hidden="true">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 11l9-7 9 7"/><path stroke-linecap="round" stroke-linejoin="round" d="M5 10v10h14V10"/><path stroke-linecap="round" d="M10 20v-5h4v5"/></svg>
+      </span>
+      <span>
+        <span class="brand__name">binarumah<span>.site</span></span>
+        <span class="brand__tag">Kontraktor Rumah Selangor</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navigasi utama">
+      <ul class="main-nav__list">
+        <li><a class="main-nav__link" href="#laman-utama" aria-current="page">Laman Utama</a></li>
+
+        <li class="nav-dropdown" data-dropdown>
+          <button type="button" class="nav-dropdown__toggle" aria-expanded="false" aria-controls="dropdown-perkhidmatan" id="btn-perkhidmatan">
+            Perkhidmatan
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></svg>
+          </button>
+
+          <div class="nav-dropdown__panel" id="dropdown-perkhidmatan" aria-labelledby="btn-perkhidmatan">
+            <a href="#perkhidmatan" class="nav-dropdown__item nav-dropdown__item--primary">
+              <span class="nav-dropdown__ico" aria-hidden="true">
+                <svg width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 11l9-7 9 7"/><path stroke-linecap="round" stroke-linejoin="round" d="M5 10v10h14V10"/><path stroke-linecap="round" d="M10 20v-5h4v5"/></svg>
+              </span>
+              <span class="nav-dropdown__text">
+                <span class="nav-dropdown__title">Bina Rumah Atas Tanah Sendiri <span class="badge-utama">Utama</span></span>
+                <span class="nav-dropdown__desc">Banglo 1 &amp; 2 tingkat, pelan 3D dan kelulusan PBT.</span>
+              </span>
+            </a>
+
+            <a href="#perkhidmatan" class="nav-dropdown__item">
+              <span class="nav-dropdown__ico" aria-hidden="true">
+                <svg width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.7 8.3a4 4 0 0 1 5 5L11 22l-4-4 7.7-9.7Z"/><path stroke-linecap="round" d="M3 21l4-4"/></svg>
+              </span>
+              <span class="nav-dropdown__text">
+                <span class="nav-dropdown__title">Ubah Suai &amp; Renovation</span>
+                <span class="nav-dropdown__desc">Tambah bilik, naik taraf ruang dan kerja struktur.</span>
+              </span>
+            </a>
+
+            <a href="waterproofing.html" class="nav-dropdown__item">
+              <span class="nav-dropdown__ico" aria-hidden="true">
+                <svg width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11Z"/><path stroke-linecap="round" d="M9.5 14a2.5 2.5 0 0 0 2.5 2.5"/></svg>
+              </span>
+              <span class="nav-dropdown__text">
+                <span class="nav-dropdown__title">Waterproofing &amp; Baiki Bocor</span>
+                <span class="nav-dropdown__desc">Bumbung, dinding dan lantai bilik air. Dari RM500.</span>
+              </span>
+            </a>
+          </div>
+        </li>
+
+        <li><a class="main-nav__link" href="#kira-kos">Pakej &amp; Harga</a></li>
+        <li><a class="main-nav__link" href="#portfolio">Projek Siap</a></li>
+        <li><a class="main-nav__link" href="#faq">Soalan Lazim</a></li>
+        <li><a class="main-nav__link" href="#hubungi">Hubungi</a></li>
+      </ul>
+    </nav>
+
+    <a href="https://wa.me/601155919344?text=Hai%20Binarumah!%20Saya%20nak%20sebut%20harga%20bina%20rumah%20di%20Selangor."
+       target="_blank" rel="noopener"
+       class="btn btn--wa btn--sm header-cta">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.3A10 10 0 1 0 12 2Z"/></svg>
+      <span class="header-cta__short">Sebut Harga</span>
+      <span class="header-cta__full">Sebut Harga Percuma</span>
+    </a>
+
+    <button type="button" class="mobile-toggle" data-mobile-toggle aria-expanded="false" aria-controls="mobileMenu" aria-label="Buka menu navigasi">
+      <svg class="icon-menu" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="icon-close" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="m6 6 12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+
+  <div class="mobile-nav" id="mobileMenu">
+    <nav class="wrap" aria-label="Navigasi telefon">
+      <ul class="mobile-nav__list">
+        <li><a class="mobile-nav__link" href="#laman-utama" aria-current="page">Laman Utama</a></li>
+
+        <li class="mobile-sub" data-mobile-sub>
+          <button type="button" class="mobile-sub__toggle" aria-expanded="false" aria-controls="m-perkhidmatan">
+            Perkhidmatan
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="mobile-sub__panel" id="m-perkhidmatan">
+            <a href="#perkhidmatan">Bina Rumah Atas Tanah Sendiri <span class="badge-utama">Utama</span></a>
+            <a href="#perkhidmatan">Ubah Suai &amp; Renovation</a>
+            <a href="waterproofing.html">Waterproofing &amp; Baiki Bocor</a>
+          </div>
+        </li>
+
+        <li><a class="mobile-nav__link" href="#kira-kos">Pakej &amp; Harga</a></li>
+        <li><a class="mobile-nav__link" href="#portfolio">Projek Siap</a></li>
+        <li><a class="mobile-nav__link" href="#faq">Soalan Lazim</a></li>
+        <li><a class="mobile-nav__link" href="#hubungi">Hubungi Kami</a></li>
+      </ul>
+
+      <a class="mobile-nav__wa" href="https://wa.me/601155919344?text=Hai%20Binarumah!%20Saya%20nak%20sebut%20harga%20bina%20rumah%20di%20Selangor." target="_blank" rel="noopener">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.3A10 10 0 1 0 12 2Z"/></svg>
+        Sebut Harga Percuma via WhatsApp
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main id="kandungan">
+
+  <!-- ===== HERO (fokus kekal: Bina Rumah) ===== -->
+  <section id="laman-utama" class="relative overflow-hidden bg-brand-900 text-white">
+    <div class="wrap relative py-16 sm:py-24 lg:py-28">
+      <div class="max-w-2xl">
+        <p class="eyebrow text-accent-400 mb-4">Kontraktor Rumah &amp; Waterproofing · Selangor &amp; KL</p>
+        <h1 class="font-display font-extrabold text-[clamp(1.9rem,5.2vw,3.35rem)] leading-[1.1]">
+          Pakar Bina Rumah Atas Tanah Sendiri — Design Moden, Telus &amp; Berlesen CIDB
+        </h1>
+        <p class="mt-5 text-[17px] sm:text-xl text-brand-100 leading-relaxed">
+          Dari tapak kosong hingga kunci di tangan. Kami uruskan pelan 3D, kelulusan PBT dan pembinaan —
+          dengan sebut harga telus serta jaminan struktur.
+        </p>
+
+        <p class="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-[15px] font-semibold text-accent-400">
+          <span>✓ Pemeriksaan tapak percuma</span>
+          <span>✓ Pelan 3D selepas lawatan tapak</span>
+          <span>✓ Jaminan struktur 10 tahun</span>
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a href="https://wa.me/601155919344?text=Hai%20Binarumah!%20Saya%20nak%20sebut%20harga%20bina%20rumah%20di%20Selangor."
+             target="_blank" rel="noopener"
+             class="btn btn--wa">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.3A10 10 0 1 0 12 2Z"/></svg>
+            Sebut Harga Percuma
+          </a>
+          <a href="#perkhidmatan" class="btn btn--ghost-light">
+            Lihat Perkhidmatan
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 6l6 6-6 6M19 12H5"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <dl class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl">
+        <div class="bg-white/10 backdrop-blur rounded-xl p-4 border border-white/15">
+          <dt class="text-xs text-brand-100 font-semibold">Kawasan liputan</dt>
+          <dd class="font-display font-extrabold text-2xl mt-1">Selangor <span class="text-sm font-semibold text-brand-100">&amp; KL</span></dd>
+        </div>
+        <div class="bg-white/10 backdrop-blur rounded-xl p-4 border border-white/15">
+          <dt class="text-xs text-brand-100 font-semibold">Pendaftaran</dt>
+          <dd class="font-display font-extrabold text-2xl mt-1">CIDB <span class="text-sm font-semibold text-brand-100">&amp; SSM</span></dd>
+        </div>
+        <div class="bg-white/10 backdrop-blur rounded-xl p-4 border border-white/15">
+          <dt class="text-xs text-brand-100 font-semibold">Harga binaan dari</dt>
+          <dd class="font-display font-extrabold text-2xl mt-1">RM 125 <span class="text-sm font-semibold text-brand-100">/ kps</span></dd>
+        </div>
+        <div class="bg-white/10 backdrop-blur rounded-xl p-4 border border-white/15">
+          <dt class="text-xs text-brand-100 font-semibold">Pemeriksaan tapak</dt>
+          <dd class="font-display font-extrabold text-2xl mt-1">Percuma</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ===== PERKHIDMATAN UTAMA ===== -->
+  <section id="perkhidmatan" class="sec bg-brand-50 border-y border-brand-100">
+    <div class="wrap">
+      <div class="flex flex-wrap items-end justify-between gap-4 max-w-4xl">
+        <div>
+          <p class="eyebrow text-accent-600">Perkhidmatan Utama</p>
+          <h2 class="mt-3 font-display font-extrabold text-brand-900 text-[clamp(1.6rem,3.6vw,2.4rem)] leading-tight">
+            Satu Kontraktor Untuk Semua Peringkat
+          </h2>
+        </div>
+        <p class="text-[15px] text-brand-600 max-w-sm">Dari tapak kosong hingga kunci di tangan — pelan, kelulusan, pembinaan, ubah suai dan waterproofing di bawah satu perjanjian.</p>
+      </div>
+
+      <div class="mt-10 grid sm:grid-cols-2 xl:grid-cols-4 gap-6">
+
+        <!-- 1. Bina Rumah — fokus utama -->
+        <article class="service-card reveal relative bg-white rounded-2xl p-7 shadow-card border border-brand-100 flex flex-col">
+          <span class="absolute -top-3 left-7 bg-accent-500 text-brand-900 text-[12px] font-extrabold px-3 py-1.5 rounded-full">PERKHIDMATAN UTAMA</span>
+          <span class="grid place-items-center w-12 h-12 rounded-xl bg-brand-900 text-accent-400">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 11l9-7 9 7"/><path stroke-linecap="round" stroke-linejoin="round" d="M5 10v10h14V10"/><path stroke-linecap="round" d="M10 20v-5h4v5"/></svg>
+          </span>
+          <h3 class="mt-5 font-display font-bold text-brand-900 text-xl">Bina Rumah Atas Tanah Sendiri</h3>
+          <p class="mt-2 text-[15px] leading-relaxed text-brand-600 flex-1">Banglo satu dan dua tingkat, rumah kampung moden, dan rumah separa berkembar mengikut gaya hidup keluarga anda. Termasuk kerja asas, struktur, bumbung, M&amp;E dan kemasan penuh.</p>
+          <ul class="mt-5 space-y-2 text-[14px] font-semibold text-brand-700">
+            <li class="flex gap-2"><span class="text-wa-600">✓</span> 1,000 – 4,000 kaki persegi</li>
+            <li class="flex gap-2"><span class="text-wa-600">✓</span> Gaya moden, tropikal, minimalist</li>
+            <li class="flex gap-2"><span class="text-wa-600">✓</span> Jaminan struktur 10 tahun</li>
+          </ul>
+          <a href="#kira-kos" class="service-card__link">Kira anggaran <span aria-hidden="true">→</span></a>
+        </article>
+
+        <!-- 2. Pelan 3D & PBT -->
+        <article class="service-card reveal bg-white rounded-2xl p-7 shadow-card border border-brand-100 flex flex-col">
+          <span class="grid place-items-center w-12 h-12 rounded-xl bg-brand-900 text-accent-400">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4h16v12H4z"/><path stroke-linecap="round" d="M4 16l-1 4 6-3M20 16l1 4-6-3"/><path stroke-linecap="round" d="M8 8h8M8 12h5"/></svg>
+          </span>
+          <h3 class="mt-5 font-display font-bold text-brand-900 text-xl">Lukisan Pelan 3D &amp; Urusan PBT</h3>
+          <p class="mt-2 text-[15px] leading-relaxed text-brand-600 flex-1">Arkitek dan jurutera berdaftar kami menyediakan pelan kerja, visual 3D fotorealistik, dan mengurus permohonan kelulusan bangunan sehingga PBT meluluskan.</p>
+          <ul class="mt-5 space-y-2 text-[14px] font-semibold text-brand-700">
+            <li class="flex gap-2"><span class="text-wa-600">✓</span> MBSA, MPK, MPKj, MPSepang, MBSJ</li>
+            <li class="flex gap-2"><span class="text-wa-600">✓</span> Visual 3D selepas lawatan tapak</li>
+            <li class="flex gap-2"><span class="text-wa-600">✓</span> Jawab pertanyaan R1/R2 majlis</li>
+          </ul>
+          <a href="#kelulusan-pbt" class="service-card__link">Lihat proses PBT <span aria-hidden="true">→</span></a>
+        </article>
+
+        <!-- 3. Ubah Suai -->
+        <article class="service-card reveal bg-white rounded-2xl p-7 shadow-card border border-brand-100 flex flex-col">
+          <span class="grid place-items-center w-12 h-12 rounded-xl bg-brand-900 text-accent-400">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M14.7 8.3a4 4 0 0 1 5 5L11 22l-4-4 7.7-9.7Z"/><path stroke-linecap="round" d="M3 21l4-4"/></svg>
+          </span>
+          <h3 class="mt-5 font-display font-bold text-brand-900 text-xl">Ubah Suai &amp; Renovation Rumah</h3>
+          <p class="mt-2 text-[15px] leading-relaxed text-brand-600 flex-1">Tambah bilik, bina dapur luar, tingkatkan ruang tamu, atau ubah suai penuh rumah teres berusia 20 tahun — termasuk kerja struktur yang dikira oleh jurutera.</p>
+          <ul class="mt-5 space-y-2 text-[14px] font-semibold text-brand-700">
+            <li class="flex gap-2"><span class="text-wa-600">✓</span> Tambahan tingkat &amp; bilik tidur</li>
+            <li class="flex gap-2"><span class="text-wa-600">✓</span> Naik taraf wayar &amp; paip</li>
+            <li class="flex gap-2"><span class="text-wa-600">✓</span> Jadual kerja berperingkat</li>
+          </ul>
+          <a href="https://wa.me/601155919344?text=Hai%20Binarumah!%20Saya%20nak%20bincang%20projek%20ubah%20suai%20rumah%20di%20Selangor." target="_blank" rel="noopener" class="service-card__link">Bincang projek <span aria-hidden="true">→</span></a>
+        </article>
+
+        <!-- 4. Waterproofing — kad baharu -->
+        <article class="service-card service-card--featured reveal relative bg-white rounded-2xl p-7 shadow-card border-2 border-brand-900 flex flex-col">
+          <span class="absolute -top-3 left-7 bg-accent-500 text-brand-900 text-[12px] font-extrabold px-3 py-1.5 rounded-full">SERVIS BAHARU</span>
+          <span class="grid place-items-center w-12 h-12 rounded-xl bg-brand-900 text-accent-400">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3a9 9 0 0 0-9 9h18a9 9 0 0 0-9-9Z"/><path stroke-linecap="round" d="M12 3v9M5.6 7.5A9 9 0 0 0 3 12M18.4 7.5A9 9 0 0 1 21 12M12 21v-9"/></svg>
+          </span>
+          <h3 class="mt-5 font-display font-bold text-brand-900 text-xl">Pakar Waterproofing &amp; Baiki Bocor</h3>
+          <p class="mt-2 text-[15px] leading-relaxed text-brand-600 flex-1">Penyelesaian pantas &amp; kekal untuk masalah bumbung, dinding, dan lantai bilik air bocor. Selesaikan segera sebelum struktur rumah rosak. Bermula dari RM500.</p>
+          <ul class="mt-5 space-y-2 text-[14px] font-semibold text-brand-700">
+            <li class="flex gap-2"><span class="text-wa-600">✓</span> Pakej dari RM 500</li>
+            <li class="flex gap-2"><span class="text-wa-600">✓</span> Suntikan tanpa pecah jubin</li>
+            <li class="flex gap-2"><span class="text-wa-600">✓</span> Lawatan tapak percuma</li>
+          </ul>
+          <a href="waterproofing.html" class="service-card__link">Lihat Pakej Waterproofing <span aria-hidden="true">→</span></a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA RINGKAS ===== -->
+  <section id="hubungi" class="wp-section">
+    <div class="wrap">
+      <div class="price-panel">
+        <div class="price-panel__copy">
+          <p class="eyebrow">Bina rumah atau baiki bocor?</p>
+          <h2>Rundingan awal tanpa sebarang kos.</h2>
+          <p>Beritahu kami keperluan anda — tanah kosong, ubah suai, atau kebocoran rumah. Kami akan cadangkan langkah seterusnya.</p>
+        </div>
+        <div class="price-box">
+          <p class="price-box__label">Hubungi terus</p>
+          <p class="price-box__amount">011-5591 9344</p>
+          <a href="https://wa.me/601155919344" target="_blank" rel="noopener" class="btn btn--wa btn--block">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.3A10 10 0 1 0 12 2Z"/></svg>
+            WhatsApp Binarumah
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" aria-label="binarumah.site — laman utama">
+          <span class="brand__mark" aria-hidden="true">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 11l9-7 9 7"/><path stroke-linecap="round" stroke-linejoin="round" d="M5 10v10h14V10"/><path stroke-linecap="round" d="M10 20v-5h4v5"/></svg>
+          </span>
+          <span>
+            <span class="brand__name">binarumah<span>.site</span></span>
+            <span class="brand__tag">Kontraktor Rumah Selangor</span>
+          </span>
+        </a>
+        <p>Kontraktor bina rumah atas tanah sendiri, ubah suai dan pakar waterproofing di Selangor &amp; Kuala Lumpur.</p>
+        <div class="footer-trust"><span>CIDB</span><span>SSM</span><span>Sebut harga bertulis</span></div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Perkhidmatan</h3>
+        <ul>
+          <li><a href="#perkhidmatan">Bina Rumah Atas Tanah Sendiri</a></li>
+          <li><a href="#perkhidmatan">Ubah Suai &amp; Renovation</a></li>
+          <li><a href="waterproofing.html">Waterproofing &amp; Baiki Bocor</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Pautan</h3>
+        <ul>
+          <li><a href="index.html">Laman Utama</a></li>
+          <li><a href="#perkhidmatan">Perkhidmatan</a></li>
+          <li><a href="#hubungi">Hubungi Kami</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Hubungi</h3>
+        <ul class="footer-contact">
+          <li>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            <span>Prima Seri Gombak, 68100 Batu Caves, Selangor</span>
+          </li>
+          <li>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></svg>
+            <a href="tel:+601155919344">+60 11-5591 9344</a>
+          </li>
+          <li>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 5h16v14H4z"/><path stroke-linecap="round" d="m4 7 8 6 8-6"/></svg>
+            <a href="mailto:sales@nagasaribu.online">sales@nagasaribu.online</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span data-year>2026</span> binarumah.site · Demo homepage untuk semakan UI/UX.</p>
+      <p><a href="waterproofing.html">Lihat landing page waterproofing →</a></p>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta" aria-label="Hubungi Binarumah">
+  <a href="https://wa.me/601155919344" target="_blank" rel="noopener" class="btn btn--wa">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.3A10 10 0 1 0 12 2Z"/></svg>
+    WhatsApp
+  </a>
+  <a href="waterproofing.html" class="btn btn--outline">Waterproofing</a>
+</div>
+
+<a href="https://wa.me/601155919344" target="_blank" rel="noopener" class="wa-float" aria-label="WhatsApp Binarumah">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.3A10 10 0 1 0 12 2Z"/></svg>
+  WhatsApp
+</a>
+
+<script src="assets/js/site.js" defer></script>
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</body>
+</html>

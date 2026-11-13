@@ -1,0 +1,268 @@
+/* ============================================================
+   binarumah.site — komponen kongsi untuk halaman dalaman,
+   galeri projek dan kad promosi.
+   Dimuatkan selepas site.css. Versi: 2026-11-13
+   ============================================================ */
+
+/* ---------- Halaman undang-undang / maklumat ---------- */
+.legal-page {
+  width: 100%;
+  max-width: 920px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+.legal-content {
+  color: #24506F;
+  font-size: 16px;
+  line-height: 1.8;
+}
+.legal-content > section + section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #E2E8F0;
+}
+.legal-content h2 {
+  margin: 0 0 .65rem;
+  color: #0B1F33;
+  font-family: "Plus Jakarta Sans", Manrope, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+.legal-content h3 {
+  margin: 1.25rem 0 .35rem;
+  color: #12293F;
+  font-family: "Plus Jakarta Sans", Manrope, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+.legal-content p {
+  margin: 0 0 .85rem;
+}
+.legal-content ul,
+.legal-content ol {
+  margin: .5rem 0 1rem;
+  padding-left: 1.35rem;
+}
+.legal-content li {
+  margin-bottom: .45rem;
+}
+.legal-content a {
+  color: #1B3A57;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.legal-content a:hover {
+  color: #DB8601;
+}
+.legal-note {
+  margin-top: 1.25rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid #E2E8F0;
+  border-left: 4px solid #F0A020;
+  border-radius: .75rem;
+  background: #F8FAFC;
+  color: #24506F;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ---------- Halaman terima kasih ---------- */
+.success-card {
+  width: 100%;
+  max-width: 760px;
+  margin-inline: auto;
+  padding: clamp(2rem, 5vw, 3.5rem);
+  border: 1px solid #E2E8F0;
+  border-radius: 1.5rem;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(11, 31, 51, .06), 0 18px 50px rgba(11, 31, 51, .10);
+  text-align: center;
+}
+.success-icon {
+  display: grid;
+  place-items: center;
+  width: 84px;
+  height: 84px;
+  margin: 0 auto 1.5rem;
+  border-radius: 9999px;
+  background: #E8F8EE;
+  color: #128C43;
+}
+.success-card h1 {
+  margin: 0;
+  color: #0B1F33;
+  font-family: "Plus Jakarta Sans", Manrope, sans-serif;
+  font-size: clamp(1.55rem, 4.4vw, 2.35rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+.success-card .success-lead {
+  margin: 1rem auto 0;
+  max-width: 600px;
+  color: #24506F;
+  font-size: 16px;
+  line-height: 1.8;
+}
+.success-actions {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  margin-top: 1.75rem;
+}
+@media (min-width: 640px) {
+  .success-actions { flex-direction: row; justify-content: center; }
+}
+.success-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .55rem;
+  min-height: 48px;
+  padding: .85rem 1.25rem;
+  border-radius: .85rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+.success-actions .success-wa {
+  background: #1EA453;
+  color: #fff;
+}
+.success-actions .success-wa:hover { background: #128C43; }
+.success-actions .success-home {
+  border: 2px solid #0B1F33;
+  color: #0B1F33;
+  background: #fff;
+}
+.success-actions .success-home:hover { background: #0B1F33; color: #fff; }
+.success-meta {
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #E2E8F0;
+  color: #64748B;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* ---------- Galeri projek: tinggi seragam, tiada bertindih ---------- */
+.project-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: stretch;
+  margin-top: 2.5rem;
+}
+@media (min-width: 640px) {
+  .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1024px) {
+  .project-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+.project-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid #E2E8F0;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(11, 31, 51, .06), 0 10px 30px rgba(11, 31, 51, .08);
+}
+.project-card__media {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #F1F5F9;
+}
+.project-card__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.project-card__body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: .35rem;
+  padding: 1.1rem 1.15rem 1.25rem;
+}
+.project-card__title {
+  margin: 0;
+  color: #0B1F33;
+  font-family: "Plus Jakarta Sans", Manrope, sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+.project-card__caption {
+  margin: 0;
+  color: #24506F;
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+/* ---------- Poster promosi: teks tidak terpotong ---------- */
+.promo-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+  margin-top: 2.5rem;
+}
+@media (min-width: 640px) {
+  .promo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1024px) {
+  .promo-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+.promo-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid #E2E8F0;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(11, 31, 51, .06), 0 10px 30px rgba(11, 31, 51, .08);
+}
+.promo-card__media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: #F8FAFC;
+}
+.promo-card__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.promo-card__body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: .4rem;
+  padding: 1.15rem 1.25rem 1.35rem;
+}
+.promo-card__body a {
+  margin-top: auto;
+  padding-top: .9rem;
+}
+
+/* ---------- Pembetulan kecil untuk skrin telefon ---------- */
+@media (max-width: 639px) {
+  .project-grid,
+  .promo-grid { gap: 1rem; }
+  .project-card__body,
+  .promo-card__body { padding: 1rem; }
+  .success-card { border-radius: 1rem; }
+}

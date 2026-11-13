@@ -23,7 +23,7 @@ Kajang dan Bangi berada di bawah **Majlis Perbandaran Kajang (MPKj)**, manakala 
 Dokumen yang biasanya diperlukan untuk permohonan pelan bangunan rumah kediaman:
 
 - Geran tanah atau rekod pertukaran pemilikan, berserta bil cukai tanah dan assessment terkini
-- Gambaranajah daripada juruukur berdaftar, termasuk paras tanah semasa
+- Gambar rajah / pelan tanah daripada juruukur berdaftar, termasuk paras tanah semasa
 - Pelan arkitek lengkap dengan pelan tapak yang menunjukkan jarak sempadan dan litar
 - Pelan struktur dan pelan M&E yang ditandatangani jurutera berdaftar
 - Laporan ujian tanah, terutama untuk rumah dua tingkat dan tapak cerun

@@ -23,7 +23,7 @@ Kawasan Bandaraya Klang dan Pulau Indah dikendalikan oleh **Majlis Perbandaran K
 Untuk membina rumah atas tanah sendiri di kawasan MPK, anda biasanya memerlukan:
 
 - Salinan geran tanah (muka depan dan belakang) berserta endorsement semasa
-- Gambaranajah (plan tanah) daripada juruukur tanah berdaftar
+- Gambar rajah (pelan tanah) daripada juruukur tanah berdaftar
 - Pelan arkitek lengkap — pelan lantai, kenaikan, keratan, tapak dan senarai ruang
 - Pelan struktur dan kejuruteraan mekanikal/aliran elektrik yang ditandatangani jurutera berdaftar (BEM)
 - Laporan ujian tanah (soil investigation report) untuk rumah dua tingkat atau tapak bertanah lembut

@@ -58,7 +58,7 @@ Harga pasaran Selangor 2026 ialah **RM 120 hingga RM 400 sekaki persegi**. Sepan
 | 2,000 kps | RM 238k – 356k | RM 356k – 554k | RM 252k – 378k | RM 378k – 588k |
 | 2,500 kps | RM 297k – 446k | RM 446k – 693k | RM 315k – 472k | RM 472k – 735k |
 
-Di luar angka ini: harga tanah, yuran tukar syarat atau kebenaran merancang, kerja timbunan besar, sambungan air dan TNB di luar litar, tangki air dan pam, landskap matang, perabuk serta kos guaman dan penilaian.
+Di luar angka ini: harga tanah, yuran tukar syarat atau kebenaran merancang, kerja timbunan besar, sambungan air dan TNB di luar litar, tangki air dan pam, landskap matang, perabot serta kos guaman dan penilaian.
 
 Contoh praktikal: banglo satu tingkat 1,800 kps dengan 4 bilik di Salak Tinggi pada spesifikasi premium berada sekitar **RM 327,000 hingga RM 509,000**. Rumah dua tingkat 2,600 kps dengan 5 bilik pula sekitar **RM 511,000 hingga RM 795,000**. Bina angka versi anda sendiri menggunakan [alat pengira kos]({{home}}#kira-kos).
 
@@ -94,7 +94,7 @@ Tiga perkara perlu disahkan pada lawatan tapak pertama: status zon lapangan terb
 ## Soalan Lazim: Bina Rumah di Sepang
 
 **Berapa kos bina rumah satu tingkat 1,800 kaki persegi di Sepang?**
-Sekitar RM 327,000 hingga RM 509,000 pada spesifikasi premium, sebelum kos tanah, landskap dan perabuk.
+Sekitar RM 327,000 hingga RM 509,000 pada spesifikasi premium, sebelum kos tanah, landskap dan perabot.
 
 **Berapa lama kelulusan pelan bangunan MPSepang?**
 Kebiasaannya 3 hingga 5 bulan untuk rumah kediaman lengkap. Lot dalam zon lapangan terbang atau kawasan khas boleh mengambil masa lebih panjang kerana perlu rujukan agensi.

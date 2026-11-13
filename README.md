@@ -51,9 +51,12 @@ tools/build-blog.js            ← penjana blog (legacy; semak template sebelum 
 
 `privasi.html` ialah redirect lama ke `/privacy`.
 
-## Conversion tracking (Google Ads / GA4)
+## Conversion tracking (GTM / Google Ads / GA4)
 
-ID yang telah dipasang pada ketiga-tiga halaman:
+GTM container **`GTM-MSG537M5`** dimuatkan pada `index.html`, `waterproofing.html`,
+`success.html`, `privacy.html` dan `terms.html`.
+
+ID yang telah dipasang pada halaman utama, waterproofing, success dan privacy:
 
 ```js
 window.BINARUMAH_TRACKING = {
@@ -83,6 +86,10 @@ Jika label masih kosong:
 - Google Ads conversion **tidak** dihantar (kerana tiada label).
 - GA4 `generate_lead` **tetap** dihantar.
 - Klik WhatsApp direkod sebagai `whatsapp_click` dalam GA4.
+
+> Nota: GTM dan tag langsung (`tracking.js`) dimuatkan serentak. Jika container GTM
+> juga mempunyai tag GA4/Google Ads, pastikan hanya satu sumber menghantar
+> `page_view` / konversi untuk mengelakkan data berganda.
 
 Aliran konversi:
 

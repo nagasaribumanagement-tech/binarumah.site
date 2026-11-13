@@ -49,7 +49,7 @@ Harga pasaran Selangor 2026 bermula pada **RM 120 hingga RM 400 sekaki persegi**
 | 2,000 kps | RM 245k – 367k | RM 367k – 571k | RM 259k – 389k | RM 389k – 605k |
 | 2,500 kps | RM 306k – 459k | RM 459k – 714k | RM 324k – 487k | RM 487k – 757k |
 
-Perlu diingat, anggaran ini belum termasuk: harga tanah, kerja cerun dan tembok penahan, timbunan besar, landskap matang, perabuk, tangki air dan pam, sistem solar, serta yuran guaman, penilaian dan proses pinjaman.
+Perlu diingat, anggaran ini belum termasuk: harga tanah, kerja cerun dan tembok penahan, timbunan besar, landskap matang, perabot, tangki air dan pam, sistem solar, serta yuran guaman, penilaian dan proses pinjaman.
 
 Untuk lot 0.2 ekar di Bukit Mahkota dengan rumah dua tingkat 2,400 kps dan 4 bilik, anggaran premium berada sekitar **RM 476,000 hingga RM 741,000**. Anda boleh mengira versi bajet anda sendiri pada [alat anggaran kos]({{home}}#kira-kos) di laman utama kami.
 

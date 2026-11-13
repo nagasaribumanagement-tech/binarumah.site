@@ -48,7 +48,7 @@ Harga pasaran Selangor 2026 **bermula pada RM 120 dan boleh mencecah RM 400 seka
 | 2,000 kps | RM 247k – 371k | RM 371k – 577k | RM 262k – 393k | RM 393k – 611k |
 | 2,500 kps | RM 309k – 464k | RM 464k – 721k | RM 328k – 491k | RM 491k – 764k |
 
-Anggaran di atas telah memasukkan faktor lokasi Shah Alam sebanyak 3% berbanding purata Selangor, dan masih di luar skop: harga tanah, perobohan rumah lama, perabuk, landskap matang, sistem solar, serta yuran guaman dan penilaian pinjaman.
+Anggaran di atas telah memasukkan faktor lokasi Shah Alam sebanyak 3% berbanding purata Selangor, dan masih di luar skop: harga tanah, perobohan rumah lama, perabot, landskap matang, sistem solar, serta yuran guaman dan penilaian pinjaman.
 
 Jika anda merancang rumah dua tingkat 2,600 kps dengan 4 bilik seperti ramai keluarga di Shah Alam, anggaran premium berada sekitar **RM 521,000 hingga RM 811,000**. Alat pengira di [halaman utama kami]({{home}}#kira-kos) boleh memberikan julat tersuai mengikut keluasan, bilangan bilik dan sektor anda.
 

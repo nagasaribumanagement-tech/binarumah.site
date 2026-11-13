@@ -38,7 +38,7 @@ Satu lagi isu khusus Klang: banyak lot tanah lama mempunyai sempadan yang tidak 
 
 Harga pasaran di Selangor untuk 2026 **bermula RM 120 dan boleh mencecah RM 400 sekaki persegi** bergantung kepada tahap spesifikasi. Klang berada pada kelompok harga pertengahan kerana bekalan bahan dan tenaga kerja mudah diperoleh melalui kawasan industri di sekitar Port Klang, tetapi kos pengangkutan dan pemadatan tanah boleh meningkat di zon lembah.
 
-Jadual berikut ialah anggaran jumlah kos binaan (belum termasuk harga tanah, perabuk, landskap matang dan yuran guaman atau pinjaman):
+Jadual berikut ialah anggaran jumlah kos binaan (belum termasuk harga tanah, perabot, landskap matang dan yuran guaman atau pinjaman):
 
 | Keluasan binaan | 1 Tingkat · Asas | 1 Tingkat · Premium | 2 Tingkat · Asas | 2 Tingkat · Premium |
 | --- | --- | --- | --- | --- |

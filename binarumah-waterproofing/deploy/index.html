@@ -112,11 +112,12 @@
   Konversi hanya dilepaskan pada halaman /success selepas borang
   sah dihantar. Halaman /success ditetapkan noindex,nofollow.
 =========================================================== -->
+<script src="assets/js/tracking-config.js"></script>
 <script>
 window.BINARUMAH_TRACKING = {
-  googleAdsId: '',
-  googleAdsConversionLabel: '',
-  ga4MeasurementId: ''
+  googleAdsId: 'AW-18567463725',
+  googleAdsConversionLabel: (window.BINARUMAH_TRACKING_CONFIG || {}).googleAdsConversionLabel || '',
+  ga4MeasurementId: 'G-RYK3F6GNT0'
 };
 </script>
 <style>
@@ -1675,7 +1676,8 @@ window.BINARUMAH_TRACKING = {
       // refresh tidak dikira sebagai konversi.
       try {
         window.sessionStorage.setItem('binarumah_lead_pending', '1');
-        window.sessionStorage.removeItem('binarumah_conversion_fired');
+        window.sessionStorage.removeItem('binarumah_ads_conversion_fired');
+        window.sessionStorage.removeItem('binarumah_ga4_lead_fired');
       } catch (err) {}
 
       // Buka WhatsApp dalam tab baharu, kemudian bawa tab ini ke /success.

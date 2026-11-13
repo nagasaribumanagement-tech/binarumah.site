@@ -1,15 +1,16 @@
 /* ============================================================
    binarumah.site — Google Ads / GA4 conversion tracking
    ------------------------------------------------------------
-   Isi ID sebenar dalam <script>window.BINARUMAH_TRACKING</script>
-   pada setiap halaman (index.html & success.html):
+   ID Google Ads dan GA4 ditetapkan dalam window.BINARUMAH_TRACKING
+   pada index.html, success.html dan waterproofing.html.
 
-     googleAdsId:             "AW-XXXXXXXXXX"
-     googleAdsConversionLabel:"AbCdEfGhIj-KLMNOP"
-     ga4MeasurementId:        "G-XXXXXXXXXX"
+   Label konversi Google Ads diisi dalam satu tempat sahaja:
+   assets/js/tracking-config.js
+     window.BINARUMAH_TRACKING_CONFIG.googleAdsConversionLabel
 
-   Jika ID dibiarkan kosong, tiada skrip Google dimuatkan dan
-   tiada event dihantar. Ini mengelakkan data palsu semasa ujian.
+   Jika label kosong:
+   - Google Ads conversion tidak dihantar (tiada label).
+   - GA4 generate_lead tetap dihantar jika GA4 ID ada.
 
    Konversi hanya dilepaskan pada halaman /success, iaitu selepas
    borang sah dihantar. index.html menetapkan binarumah_lead_pending
@@ -46,37 +47,58 @@
   script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(primaryId);
   document.head.appendChild(script);
 
-  /**
-   * Lepaskan konversi Google Ads sekali sahaja bagi setiap penghantaran.
-   * Borang memadam kunci ini sebelum redirect ke /success supaya
-   * penghantaran seterusnya tetap dikira.
-   */
-  window.binarumahTrackConversion = function () {
-    if (!adsId || !adsLabel) return false;
-
-    try {
-      if (window.sessionStorage.getItem('binarumah_conversion_fired') === '1') {
-        return false;
-      }
-      window.sessionStorage.setItem('binarumah_conversion_fired', '1');
-    } catch (err) {
-      // sessionStorage mungkin disekat; event tetap dihantar sekali.
-    }
-
+  function sendAdsConversion() {
     gtag('event', 'conversion', {
       send_to: adsId + '/' + adsLabel,
       event_category: 'lead',
       event_label: 'borang_sebut_harga'
     });
+  }
 
-    if (ga4Id) {
-      gtag('event', 'generate_lead', {
-        form_name: 'sebut_harga',
-        method: 'whatsapp'
-      });
+  function sendGa4Lead() {
+    gtag('event', 'generate_lead', {
+      form_name: 'sebut_harga',
+      method: 'whatsapp'
+    });
+  }
+
+  /**
+   * Lepaskan konversi sekali sahaja bagi setiap penghantaran.
+   * Kunci Ads dan GA4 berasingan supaya label Ads boleh ditambah
+   * kemudian tanpa menyekat event GA4 yang sudah berjalan.
+   * Borang memadam kedua-dua kunci sebelum redirect ke /success.
+   */
+  window.binarumahTrackConversion = function () {
+    var sent = false;
+
+    if (adsId && adsLabel) {
+      try {
+        if (window.sessionStorage.getItem('binarumah_ads_conversion_fired') !== '1') {
+          window.sessionStorage.setItem('binarumah_ads_conversion_fired', '1');
+          sendAdsConversion();
+          sent = true;
+        }
+      } catch (err) {
+        // sessionStorage disekat: hantar sekali untuk page load ini.
+        sendAdsConversion();
+        sent = true;
+      }
     }
 
-    return true;
+    if (ga4Id) {
+      try {
+        if (window.sessionStorage.getItem('binarumah_ga4_lead_fired') !== '1') {
+          window.sessionStorage.setItem('binarumah_ga4_lead_fired', '1');
+          sendGa4Lead();
+          sent = true;
+        }
+      } catch (err) {
+        sendGa4Lead();
+        sent = true;
+      }
+    }
+
+    return sent;
   };
 
   /* Klik WhatsApp boleh diukur sebagai mikro-konversi dalam GA4. */

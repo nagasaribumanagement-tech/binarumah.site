@@ -44,15 +44,16 @@
 
 <!-- ==========================================================
   GOOGLE ADS / GA4 TRACKING
-  Isi ID sebenar di bawah. Jika kosong, tiada skrip Google
-  dimuatkan. Halaman ini tiada borang; klik WhatsApp direkod
-  sebagai mikro-konversi GA4 (whatsapp_click).
+  Label konversi diambil dari assets/js/tracking-config.js.
+  Halaman ini tiada borang; klik WhatsApp direkod sebagai
+  mikro-konversi GA4 (whatsapp_click).
 =========================================================== -->
+<script src="assets/js/tracking-config.js"></script>
 <script>
 window.BINARUMAH_TRACKING = {
-  googleAdsId: '',
-  googleAdsConversionLabel: '',
-  ga4MeasurementId: ''
+  googleAdsId: 'AW-18567463725',
+  googleAdsConversionLabel: (window.BINARUMAH_TRACKING_CONFIG || {}).googleAdsConversionLabel || '',
+  ga4MeasurementId: 'G-RYK3F6GNT0'
 };
 </script>
 

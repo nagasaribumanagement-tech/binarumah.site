@@ -53,22 +53,36 @@ tools/build-blog.js            ← penjana blog (legacy; semak template sebelum 
 
 ## Conversion tracking (Google Ads / GA4)
 
-Isi ID sebenar di dalam blok `window.BINARUMAH_TRACKING` pada:
-
-- `deploy/index.html`
-- `deploy/success.html`
-- `deploy/waterproofing.html`
+ID yang telah dipasang pada ketiga-tiga halaman:
 
 ```js
 window.BINARUMAH_TRACKING = {
-  googleAdsId: 'AW-XXXXXXXXXX',
-  googleAdsConversionLabel: 'XXXXXXXXXXXXXXXX',
-  ga4MeasurementId: 'G-XXXXXXXXXX'
+  googleAdsId: 'AW-18567463725',
+  googleAdsConversionLabel: (window.BINARUMAH_TRACKING_CONFIG || {}).googleAdsConversionLabel || '',
+  ga4MeasurementId: 'G-RYK3F6GNT0'
 };
 ```
 
-Jika ID dibiarkan kosong, tiada skrip Google dimuatkan dan tiada event dihantar.
-Ini mengelakkan data palsu semasa ujian.
+**Label konversi Google Ads** diisi di satu tempat sahaja:
+
+```
+deploy/assets/js/tracking-config.js
+```
+
+```js
+window.BINARUMAH_TRACKING_CONFIG = {
+  googleAdsConversionLabel: 'AbCdEfGhIj-KLMNOP'
+};
+```
+
+Fail itu tidak di-cache lama (lihat `_headers`), jadi label boleh ditambah
+kemudian tanpa mengubah kod halaman dan tanpa deploy penuh.
+
+Jika label masih kosong:
+
+- Google Ads conversion **tidak** dihantar (kerana tiada label).
+- GA4 `generate_lead` **tetap** dihantar.
+- Klik WhatsApp direkod sebagai `whatsapp_click` dalam GA4.
 
 Aliran konversi:
 
@@ -103,7 +117,7 @@ akaun produksi (`3125856f...`). Token/akses untuk akaun produksi diperlukan sebe
 
 ## Semakan sebelum publish
 
-- [ ] Isi Google Ads ID + conversion label + GA4 ID.
+- [ ] Isi Google Ads conversion label dalam `deploy/assets/js/tracking-config.js`.
 - [ ] Uji hantar borang: `/success` mesti dibuka dan konversi hanya sekali.
 - [ ] Uji `/privacy`, `/terms`, `/success`, `/waterproofing` (HTTP 200, bukan 404).
 - [ ] Uji galeri pada 390px, 768px, 1440px — kad 4:3, tinggi seragam.

@@ -112,21 +112,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet" href="assets/css/pages.css?v=20261113">
 <link rel="preload" as="image" href="images/hero-banglo.jpg" fetchpriority="high">
 
-<!-- ==========================================================
-  GOOGLE ADS / GA4 CONVERSION TRACKING
-  Isi ID sebenar di bawah. Jika dibiarkan kosong, tiada skrip
-  Google dimuatkan dan tiada event dihantar.
-  Konversi hanya dilepaskan pada halaman /success selepas borang
-  sah dihantar. Halaman /success ditetapkan noindex,nofollow.
-=========================================================== -->
-<script src="assets/js/tracking-config.js"></script>
-<script>
-window.BINARUMAH_TRACKING = {
-  googleAdsId: 'AW-18567463725',
-  googleAdsConversionLabel: (window.BINARUMAH_TRACKING_CONFIG || {}).googleAdsConversionLabel || '',
-  ga4MeasurementId: 'G-RYK3F6GNT0'
-};
-</script>
 <style>
   /* Header: pastikan butang CTA muat satu baris pada skrin 1024-1279px */
   @media (min-width: 1024px) and (max-width: 1279px) {
@@ -1687,8 +1672,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       // refresh tidak dikira sebagai konversi.
       try {
         window.sessionStorage.setItem('binarumah_lead_pending', '1');
-        window.sessionStorage.removeItem('binarumah_ads_conversion_fired');
-        window.sessionStorage.removeItem('binarumah_ga4_lead_fired');
       } catch (err) {}
 
       // Buka WhatsApp dalam tab baharu, kemudian bawa tab ini ke /success.
@@ -1704,7 +1687,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"d19f84168fd34eebba261a4574504bc7","r":1,"spa":2}' crossorigin="anonymous"></script>
 <script src="assets/js/nav-dropdown.js" defer></script>
-<script src="assets/js/tracking.js"></script>
 <script>
   document.querySelectorAll('.tahunSemasa').forEach(el => el.innerText = new Date().getFullYear());
 </script>

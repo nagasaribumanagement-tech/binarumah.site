@@ -51,45 +51,19 @@ tools/build-blog.js            ← penjana blog (legacy; semak template sebelum 
 
 `privasi.html` ialah redirect lama ke `/privacy`.
 
-## Conversion tracking (GTM / Google Ads / GA4)
+## Conversion tracking (GTM sahaja)
 
-GTM container **`GTM-MSG537M5`** dimuatkan pada `index.html`, `waterproofing.html`,
-`success.html`, `privacy.html` dan `terms.html`.
+Semua tag Google dikonfigurasi di dalam **Google Tag Manager**:
 
-ID yang telah dipasang pada halaman utama, waterproofing, success dan privacy:
+- Container: **`GTM-MSG537M5`**
+- GA4 Measurement ID: **`G-RYK3F6GNT0`**
+- Google Ads Conversion ID: **`AW-18567463725`**
+- Conversion label: ditetapkan dalam tag Google Ads di dalam GTM
 
-```js
-window.BINARUMAH_TRACKING = {
-  googleAdsId: 'AW-18567463725',
-  googleAdsConversionLabel: (window.BINARUMAH_TRACKING_CONFIG || {}).googleAdsConversionLabel || '',
-  ga4MeasurementId: 'G-RYK3F6GNT0'
-};
-```
-
-**Label konversi Google Ads** diisi di satu tempat sahaja:
-
-```
-deploy/assets/js/tracking-config.js
-```
-
-```js
-window.BINARUMAH_TRACKING_CONFIG = {
-  googleAdsConversionLabel: 'AbCdEfGhIj-KLMNOP'
-};
-```
-
-Fail itu tidak di-cache lama (lihat `_headers`), jadi label boleh ditambah
-kemudian tanpa mengubah kod halaman dan tanpa deploy penuh.
-
-Jika label masih kosong:
-
-- Google Ads conversion **tidak** dihantar (kerana tiada label).
-- GA4 `generate_lead` **tetap** dihantar.
-- Klik WhatsApp direkod sebagai `whatsapp_click` dalam GA4.
-
-> Nota: GTM dan tag langsung (`tracking.js`) dimuatkan serentak. Jika container GTM
-> juga mempunyai tag GA4/Google Ads, pastikan hanya satu sumber menghantar
-> `page_view` / konversi untuk mengelakkan data berganda.
+Tiada lagi `gtag/js`, `gtag('config', ...)`, `window.BINARUMAH_TRACKING`,
+atau `tracking.js` dimuatkan dalam mana-mana halaman HTML. Halaman utama
+(index, waterproofing, success, privacy, terms) dan 4 halaman blog hanya
+menggunakan snippet GTM.
 
 Aliran konversi:
 
@@ -97,11 +71,18 @@ Aliran konversi:
 2. Butiran dibuka dalam WhatsApp dengan mesej pra-isi.
 3. `sessionStorage.binarumah_lead_pending = '1'` ditetapkan.
 4. Pelawat dialihkan ke `/success`.
-5. `success.html` hanya memanggil `binarumahTrackConversion()` jika tanda
-   `binarumah_lead_pending` wujud, kemudian memadamnya.
-6. Lawatan terus ke `/success`, refresh, atau crawler **tidak** mengira konversi.
+5. `success.html` hanya push event ini jika tanda pending wujud, kemudian memadamnya:
 
-`tracking.js` juga merekod klik `wa.me` sebagai `whatsapp_click` dalam GA4.
+```js
+window.dataLayer.push({ event: 'generate_lead', form_location: 'binarumah_quote_form' });
+```
+
+6. Dalam GTM, trigger `generate_lead` digunakan untuk tag GA4 dan Google Ads
+   (termasuk conversion label).
+7. Lawatan terus ke `/success`, refresh, atau crawler **tidak** push event.
+
+> Jangan tambah tag gtag/GA4/Google Ads secara langsung dalam HTML. Semua
+> pengukuran mesti melalui GTM supaya tiada page_view atau konversi berganda.
 
 ## Deploy ke Cloudflare Worker
 
@@ -124,7 +105,7 @@ akaun produksi (`3125856f...`). Token/akses untuk akaun produksi diperlukan sebe
 
 ## Semakan sebelum publish
 
-- [ ] Isi Google Ads conversion label dalam `deploy/assets/js/tracking-config.js`.
+- [ ] Konfigurasi tag GA4 + Google Ads (termasuk conversion label) dalam GTM-MSG537M5.
 - [ ] Uji hantar borang: `/success` mesti dibuka dan konversi hanya sekali.
 - [ ] Uji `/privacy`, `/terms`, `/success`, `/waterproofing` (HTTP 200, bukan 404).
 - [ ] Uji galeri pada 390px, 768px, 1440px — kad 4:3, tinggi seragam.

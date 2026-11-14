@@ -21,6 +21,16 @@
     return text ? text.slice(0, 80) : "whatsapp";
   }
 
+  function currentPagePath() {
+    var explicit = document.body ? document.body.getAttribute("data-page-path") : "";
+    if (explicit && explicit.trim()) return explicit.trim();
+
+    var path = window.location.pathname;
+    if (/\/waterproofing(\.html)?$/.test(path)) return "/waterproofing";
+    if (/\/success(\.html)?$/.test(path)) return "/success";
+    return path;
+  }
+
   document.addEventListener(
     "click",
     function (event) {
@@ -33,7 +43,7 @@
       window.dataLayer.push({
         event: "whatsapp_click",
         lead_source: leadSource(el),
-        page_path: window.location.pathname
+        page_path: currentPagePath()
       });
     },
     false

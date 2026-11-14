@@ -10,14 +10,14 @@ Dibina menggunakan HTML5 semantik + CSS sedia ada `binarumah.site`
 (Tailwind v3.4.17 yang telah dikompil) dan satu fail CSS tambahan.
 **Tiada build step, tiada framework JavaScript, tiada CDN JS.**
 
-> ## ⚠️ STATUS: SUMBER PRODUKSI TERKINI — BELUM DI-DEPLOY SEMULA
+> ## ✅ STATUS: SUMBER PRODUKSI TERKINI — SUDAH DI-DEPLOY
 >
-> - Folder **`deploy/`** ialah sumber produksi terkini (13 Nov 2026).
-> - Live mungkin masih versi lama: `/privacy`, `/terms` dan `/success` belum wujud
->   di live sehingga deploy semula dijalankan.
-> - Landing page live: **https://binarumah.site/waterproofing** (HTTP 200, versi lama).
+> - Folder **`deploy/`** ialah sumber produksi terkini (14 Nov 2026).
+> - Live sudah mempunyai `/privacy`, `/terms` dan `/success` (semua HTTP 200).
+> - Landing page live: **https://binarumah.site/waterproofing** (HTTP 200).
 > - Hosting: Cloudflare Worker `binarumah-site` (static assets), custom domain `binarumah.site`.
 > - Sumber produksi = folder **`deploy/`** — folder ini yang di-upload.
+> - Auto-deploy: setiap push ke `main` membina dan deploy melalui `wrangler.jsonc` di root repo.
 >
 > `waterproofing.html` di root ialah salinan landing page lama. Demo homepage
 > kekal di `index.html`; homepage produksi ada di `deploy/index.html`.

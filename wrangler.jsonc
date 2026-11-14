@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "binarumah-site",
+  "compatibility_date": "2026-11-14",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "./binarumah-waterproofing/deploy",
+    "not_found_handling": "404-page"
+  }
+}

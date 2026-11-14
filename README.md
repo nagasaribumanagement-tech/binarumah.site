@@ -87,21 +87,33 @@ window.dataLayer.push({ event: 'generate_lead', form_location: 'binarumah_quote_
 ## Deploy ke Cloudflare Worker
 
 Produksi menggunakan Worker static assets. Folder yang di-upload ialah
-`binarumah-waterproofing/deploy/`.
+`binarumah-waterproofing/deploy/`, ditetapkan dalam `wrangler.jsonc` di root repo.
+
+### Auto-deploy (disyorkan)
+
+Setiap push ke branch `main` mencetuskan **Cloudflare Workers Builds**:
+
+1. Cloudflare clone repo ini.
+2. Jalankan `npx wrangler deploy` menggunakan `wrangler.jsonc` di root.
+3. Worker `binarumah-site` di-deploy dengan aset daripada
+   `binarumah-waterproofing/deploy/`.
+
+Tiada build step atau `npm install` diperlukan. Pastikan check
+**Workers Builds: binarumah-site** pada commit hijau sebelum menganggap deploy berjaya.
+
+### Deploy manual
+
+Dari root repo:
 
 ```powershell
 $env:CLOUDFLARE_API_TOKEN = "<token Workers Scripts:Edit>"
 $env:CLOUDFLARE_ACCOUNT_ID = "3125856f917dc7d1d6407a79588cff42"
 
-npx --yes wrangler@4.160.1 versions upload `
-  --config "C:\Users\lenovo\AppData\Local\Temp\opencode\wrangler-binarumah-current.jsonc"
-
-npx --yes wrangler@4.160.1 versions deploy <VERSION_ID>@100% `
-  --config "C:\Users\lenovo\AppData\Local\Temp\opencode\wrangler-binarumah-current.jsonc" --yes
+npx --yes wrangler@4.160.1 deploy
 ```
 
-Nota: akaun Cloudflare yang sedang login pada mesin ini (`7940e483...`) **bukan**
-akaun produksi (`3125856f...`). Token/akses untuk akaun produksi diperlukan sebelum deploy.
+Nota: jangan deploy dari folder `binarumah-waterproofing/deploy/` secara berasingan;
+`wrangler.jsonc` di root sudah menunjuk ke folder itu.
 
 ## Semakan sebelum publish
 

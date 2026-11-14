@@ -109,12 +109,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 </script>
 
-<link rel="stylesheet" href="assets/css/site.css?v=20261112">
+<link rel="stylesheet" href="assets/css/site.css?v=20261114">
 <link rel="stylesheet" href="assets/css/waterproofing.css?v=20261112">
 <link rel="stylesheet" href="assets/css/pages.css?v=20261113">
 <link rel="preload" as="image" href="images/hero-banglo.jpg" fetchpriority="high">
 
 <style>
+html, body { overflow-x: clip; max-width: 100%; }
+  section[id] { scroll-margin-top: 5.5rem; }
+
   /* Header: pastikan butang CTA muat satu baris pada skrin 1024-1279px */
   @media (min-width: 1024px) and (max-width: 1279px) {
     #siteHeader nav ul { font-size: 12px; }
@@ -132,7 +135,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   /* Sticky CTA mudah alih */
   @media (max-width: 1023px) {
-    body { padding-bottom: 88px; }
+    body { padding-bottom: 92px; }
   }
 
   .mobile-sticky-cta {
@@ -167,7 +170,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- ===== TOP STRIP ===== -->
 <div class="bg-brand-900 text-brand-100 text-[13px]">
-  <div class="wrap flex items-center justify-between gap-4 py-2">
+  <div class="wrap flex items-center justify-center sm:justify-between gap-4 py-2">
     <p class="hidden sm:flex items-center gap-2">
       <svg class="w-4 h-4 text-accent-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.05 2.93c.3-.92 1.6-.92 1.9 0l1.07 3.29a.75.75 0 0 0 .71.52h3.46c.93 0 1.32 1.2.57 1.77l-2.8 2.04a.75.75 0 0 0-.27.72l1.07 3.29c.3.92-.75 1.69-1.54 1.12l-2.8-2.03a.75.75 0 0 0-.88 0l-2.8 2.03c-.79.57-1.84-.2-1.54-1.12l1.07-3.29a.75.75 0 0 0-.27-.72L2.1 8.51c-.75-.57-.36-1.77.57-1.77h3.46a.75.75 0 0 0 .71-.52l1.07-3.29Z"/></svg>
       Pemeriksaan tapak &amp; sebut harga percuma — bina rumah &amp; Sistem Waterproofing di Selangor &amp; KL
@@ -239,7 +242,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="flex items-center gap-2 shrink-0">
       <a id="headerCta" href="https://wa.me/601155919344?text=Hai%20Binarumah!%20Saya%20nak%20sebut%20harga%20bina%20rumah%20di%20Selangor."
          target="_blank" rel="noopener" aria-label="Sebut harga percuma via WhatsApp"
-         class="hidden sm:inline-flex items-center gap-2 bg-wa-600 hover:bg-wa-700 text-white font-bold px-3 xl:px-4 py-2.5 rounded-xl shadow-card transition whitespace-nowrap">
+         class="hidden sm:inline-flex items-center gap-2 bg-wa-600 hover:bg-wa-700 text-white font-bold px-3 xl:px-4 py-2.5 min-h-[44px] rounded-xl shadow-card transition whitespace-nowrap">
         <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.3c-.3-.1-1.7-.8-2-1-.3-.1-.5-.1-.6.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1-.4-1.9-1.2-.7-.7-1.2-1.5-1.3-1.8-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5v-.5c-.1-.1-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.5-.3M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.3A10 10 0 1 0 12 2Z"/></svg>
         <span class="whitespace-nowrap">Sebut Harga Percuma</span>
       </a>
@@ -286,7 +289,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
        class="absolute inset-0 w-full h-full object-cover">
   <div class="absolute inset-0 bg-gradient-to-r from-brand-900 via-brand-900/85 to-brand-900/35" aria-hidden="true"></div>
 
-  <div class="wrap relative py-16 sm:py-24 lg:py-28">
+  <div class="wrap relative py-12 sm:py-20 lg:py-28">
     <div class="max-w-2xl">
       <p class="eyebrow text-accent-400 mb-4">Kontraktor Rumah &amp; Sistem Waterproofing · Selangor &amp; KL</p>
       <h1 class="font-display font-extrabold text-[clamp(1.9rem,5.2vw,3.35rem)] leading-[1.1]">
@@ -316,7 +319,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
 
-    <dl class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl">
+    <dl class="mt-8 sm:mt-12 grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4 max-w-3xl">
       <div class="bg-white/10 backdrop-blur rounded-xl p-4 border border-white/15">
         <dt class="text-xs text-brand-100 font-semibold">Kawasan liputan</dt>
         <dd class="font-display font-extrabold text-2xl mt-1">Selangor <span class="text-sm font-semibold text-brand-100">&amp; KL</span></dd>
@@ -328,6 +331,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="bg-white/10 backdrop-blur rounded-xl p-4 border border-white/15">
         <dt class="text-xs text-brand-100 font-semibold">Waterproofing dari</dt>
         <dd class="font-display font-extrabold text-2xl mt-1">RM 500 <span class="text-sm font-semibold text-brand-100">/ pakej</span></dd>
+        <p class="text-[11px] font-semibold text-brand-100/80 mt-0.5">Termasuk pemeriksaan tapak</p>
       </div>
       <div class="bg-white/10 backdrop-blur rounded-xl p-4 border border-white/15">
         <dt class="text-xs text-brand-100 font-semibold">Pemeriksaan tapak</dt>
@@ -350,7 +354,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="grid place-items-center w-11 h-11 rounded-xl bg-white border border-brand-100 shrink-0">
         <svg class="w-6 h-6 text-brand-700" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 4h12v16H6z"/><path stroke-linecap="round" d="M9 8h6M9 12h6M9 16h3"/></svg>
       </span>
-      <span class="leading-tight"><span class="block font-bold text-brand-900 text-[15px]">Nagasaribu Consultancy (JR0190942-A)</span><span class="block text-[13px] text-brand-500">Syarikat berdaftar SSM · di bawah portal nagasaribu.online</span></span>
+      <span class="leading-tight"><span class="block font-bold text-brand-900 text-[15px]">Nagasaribu Consultancy (JR0190942-A)</span><span class="block text-[13px] text-brand-500">Syarikat berdaftar SSM · anak syarikat portal nagasaribu.online</span></span>
     </li>
     <li class="flex items-center gap-3">
       <span class="grid place-items-center w-11 h-11 rounded-xl bg-white border border-brand-100 shrink-0">
@@ -572,7 +576,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </label>
             <input id="sqftRange" type="range" min="600" max="6000" step="50" value="1500" class="mt-4 w-full" aria-label="Keluasan binaan dalam kaki persegi" aria-describedby="sqftHint">
             <input id="sqft" type="number" min="400" max="12000" step="50" value="1500" inputmode="numeric"
-                   class="mt-3 w-full rounded-xl border border-brand-100 bg-white px-4 py-3 font-semibold text-brand-900 focus:outline-none focus:ring-2 focus:ring-accent-500">
+                   class="mt-3 w-full rounded-xl border border-brand-100 bg-white px-4 py-3 font-semibold text-brand-900 text-base focus:outline-none focus:ring-2 focus:ring-accent-500">
             <p id="sqftHint" class="mt-2 text-[13px] text-brand-500">kps = kaki persegi. Contoh: banglo 1 tingkat 30 × 45 kaki ≈ 1,350 kps. Untuk 2 tingkat, masukkan jumlah keluasan kedua-dua lantai.</p>
           </div>
 
@@ -586,7 +590,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div>
               <label for="beds" class="block font-bold text-brand-900 mb-2.5">Bilik tidur</label>
-              <select id="beds" class="w-full rounded-xl border border-brand-100 bg-white px-4 py-3 font-semibold text-brand-900 focus:outline-none focus:ring-2 focus:ring-accent-500">
+              <select id="beds" class="w-full rounded-xl border border-brand-100 bg-white px-4 py-3 font-semibold text-brand-900 text-base focus:outline-none focus:ring-2 focus:ring-accent-500">
                 <option value="2">2 bilik</option>
                 <option value="3" selected>3 bilik</option>
                 <option value="4">4 bilik</option>
@@ -597,17 +601,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           <div>
             <span class="block font-bold text-brand-900 mb-2.5">Tahap spesifikasi</span>
-            <div class="grid sm:grid-cols-3 gap-2" role="radiogroup" aria-label="Tahap spesifikasi">
-              <button type="button" role="radio" aria-checked="false" data-tier="asas" class="tierBtn rounded-xl border-2 border-brand-100 bg-white text-brand-800 font-bold py-3 px-2 text-[14px] transition">Asas</button>
-              <button type="button" role="radio" aria-checked="true" data-tier="premium" class="tierBtn rounded-xl border-2 border-brand-900 bg-brand-900 text-white font-bold py-3 px-2 text-[14px] transition">Premium</button>
-              <button type="button" role="radio" aria-checked="false" data-tier="eksklusif" class="tierBtn rounded-xl border-2 border-brand-100 bg-white text-brand-800 font-bold py-3 px-2 text-[14px] transition">Eksklusif</button>
+            <div class="grid grid-cols-3 gap-1.5 sm:gap-2" role="radiogroup" aria-label="Tahap spesifikasi">
+              <button type="button" role="radio" aria-checked="false" data-tier="asas" class="tierBtn rounded-xl border-2 border-brand-100 bg-white text-brand-800 font-bold py-3 px-2 text-[13px] sm:text-[14px] transition">Asas</button>
+              <button type="button" role="radio" aria-checked="true" data-tier="premium" class="tierBtn rounded-xl border-2 border-brand-900 bg-brand-900 text-white font-bold py-3 px-2 text-[13px] sm:text-[14px] transition">Premium</button>
+              <button type="button" role="radio" aria-checked="false" data-tier="eksklusif" class="tierBtn rounded-xl border-2 border-brand-100 bg-white text-brand-800 font-bold py-3 px-2 text-[13px] sm:text-[14px] transition">Eksklusif</button>
             </div>
             <p id="tierDesc" class="mt-2.5 text-[13px] text-brand-500">Jubin 2×2, pintu Solid MDF, aluminium frames, cat deluxe, kabinet dapur standard.</p>
           </div>
 
           <div>
             <label for="district" class="block font-bold text-brand-900 mb-2.5">Lokasi tanah (Selangor &amp; Kuala Lumpur)</label>
-            <select id="district" class="w-full rounded-xl border border-brand-100 bg-white px-4 py-3 font-semibold text-brand-900 focus:outline-none focus:ring-2 focus:ring-accent-500">
+            <select id="district" class="w-full rounded-xl border border-brand-100 bg-white px-4 py-3 font-semibold text-brand-900 text-base focus:outline-none focus:ring-2 focus:ring-accent-500">
               <option value="1.00">Klang / Pelabuhan Klang — MPK</option>
               <option value="1.03" selected>Shah Alam — MBSA</option>
               <option value="1.02">Bangi / Kajang — MPKj</option>
@@ -679,6 +683,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         Ia belum termasuk harga tanah, kerja landskap matang, perabot dan yuran guaman atau penilaian pinjaman.
       </p>
 
+      <p class="mt-3 mb-2 text-[12.5px] font-semibold text-brand-500 md:hidden">← Leret jadual ke kiri/kanan untuk melihat semua lajur →</p>
       <div class="mt-6 overflow-x-auto rounded-2xl border border-brand-100 shadow-card" role="region" aria-label="Jadual perbandingan kos bina rumah" tabindex="0">
         <table class="w-full min-w-[720px] text-left border-collapse">
           <caption class="sr-only">Jadual perbandingan anggaran kos bina rumah di Selangor 2026 mengikut keluasan dan tahap spesifikasi</caption>
@@ -922,6 +927,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         berkaitan untuk syarat terkini.
       </p>
 
+      <p class="mt-3 mb-2 text-[12.5px] font-semibold text-brand-500 md:hidden">← Leret jadual ke kiri/kanan untuk melihat semua lajur →</p>
       <div class="mt-7 overflow-x-auto rounded-2xl border border-brand-100 bg-white shadow-card" role="region" aria-label="Jadual keluasan dan tempoh kelulusan PBT Selangor" tabindex="0">
         <table class="w-full min-w-[560px] text-left border-collapse text-[14.5px]">
           <caption class="sr-only">Senarai PBT di Selangor beserta anggaran tempoh kelulusan pelan bangunan</caption>
@@ -1262,16 +1268,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="sm:col-span-2">
           <label for="nama" class="block text-[13.5px] font-bold text-brand-700 mb-1.5">Nama penuh</label>
           <input id="nama" name="nama" required autocomplete="name" placeholder="Contoh: Ahmad Faizal"
-                 class="w-full rounded-xl border border-brand-100 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent-500">
+                 class="w-full rounded-xl border border-brand-100 px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-accent-500">
         </div>
         <div>
           <label for="tel" class="block text-[13.5px] font-bold text-brand-700 mb-1.5">No. telefon</label>
           <input id="tel" name="tel" type="tel" required autocomplete="tel" inputmode="tel" placeholder="012-345 6789"
-                 class="w-full rounded-xl border border-brand-100 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent-500">
+                 class="w-full rounded-xl border border-brand-100 px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-accent-500">
         </div>
         <div>
           <label for="daerah" class="block text-[13.5px] font-bold text-brand-700 mb-1.5">Daerah tanah</label>
-          <select id="daerah" name="daerah" class="w-full rounded-xl border border-brand-100 px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-accent-500">
+          <select id="daerah" name="daerah" class="w-full rounded-xl border border-brand-100 px-4 py-3 bg-white text-base focus:outline-none focus:ring-2 focus:ring-accent-500">
             <option>Klang</option><option selected>Shah Alam</option><option>Bangi / Kajang</option><option>Sepang</option>
             <option>Banting / Kuala Langat</option><option>Rawang / Gombak</option><option>Subang Jaya</option>
             <option>Petaling Jaya</option><option>Kuala Lumpur</option><option>Lain-lain (Selangor)</option>
@@ -1279,24 +1285,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div>
           <label for="skop" class="block text-[13.5px] font-bold text-brand-700 mb-1.5">Skop kerja</label>
-          <select id="skop" name="skop" class="w-full rounded-xl border border-brand-100 px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-accent-500">
+          <select id="skop" name="skop" class="w-full rounded-xl border border-brand-100 px-4 py-3 bg-white text-base focus:outline-none focus:ring-2 focus:ring-accent-500">
             <option>Bina rumah atas tanah sendiri</option><option>Ubah suai / renovation</option><option>Pelan &amp; kelulusan PBT sahaja</option>
           </select>
         </div>
         <div>
           <label for="keluasan2" class="block text-[13.5px] font-bold text-brand-700 mb-1.5">Anggaran keluasan (kps)</label>
           <input id="keluasan2" name="keluasan2" type="number" min="400" max="12000" step="50" value="1500" inputmode="numeric"
-                 class="w-full rounded-xl border border-brand-100 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent-500">
+                 class="w-full rounded-xl border border-brand-100 px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-accent-500">
         </div>
         <div class="sm:col-span-2">
           <label for="mesy" class="block text-[13.5px] font-bold text-brand-700 mb-1.5">Keperluan ringkas (pilihan)</label>
           <textarea id="mesy" name="mesy" rows="3" placeholder="Contoh: 4 bilik, 2 tingkat, tanah 0.15 ekar, ingin guna LPPSA"
-                    class="w-full rounded-xl border border-brand-100 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent-500"></textarea>
+                    class="w-full rounded-xl border border-brand-100 px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-accent-500"></textarea>
         </div>
         <div class="sm:col-span-2">
           <label for="consent" class="flex items-start gap-2.5 text-[12.5px] leading-relaxed text-brand-600">
             <input id="consent" name="consent" type="checkbox" required class="mt-0.5 h-4 w-4 shrink-0 rounded border-brand-100 text-wa-600 focus:ring-accent-500">
-            <span>Saya bersetuju dengan <a href="/privacy" class="font-bold text-brand-800 underline" target="_blank" rel="noopener">Dasar Privasi</a> dan <a href="/terms" class="font-bold text-brand-800 underline" target="_blank" rel="noopener">Terma &amp; Syarat</a>, dan bersetuju dihubungi oleh Nagasaribu Consultancy (JR0190942-A), entiti di bawah portal nagasaribu.online, mengenai pertanyaan ini.</span>
+            <span>Saya bersetuju dengan <a href="/privacy" class="font-bold text-brand-800 underline" target="_blank" rel="noopener">Dasar Privasi</a> dan <a href="/terms" class="font-bold text-brand-800 underline" target="_blank" rel="noopener">Terma &amp; Syarat</a>, dan bersetuju dihubungi oleh Nagasaribu Consultancy (JR0190942-A), anak syarikat portal nagasaribu.online, mengenai pertanyaan ini.</span>
           </label>
         </div>
         <div class="sm:col-span-2 grid gap-2.5">
@@ -1335,13 +1341,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="mt-6">
         <p class="font-display font-bold text-white text-[13px]">Ikuti Kami</p>
         <div class="mt-3 flex items-center gap-2">
-          <a href="https://www.tiktok.com/@nsm.rumah.idaman" target="_blank" rel="noopener" aria-label="TikTok Binarumah - nsm.rumah.idaman" class="grid place-items-center w-10 h-10 rounded-xl border border-white/15 text-brand-100 hover:text-white hover:bg-white/10 transition">
+          <a href="https://www.tiktok.com/@nsm.rumah.idaman" target="_blank" rel="noopener" aria-label="TikTok Binarumah - nsm.rumah.idaman" class="grid place-items-center w-11 h-11 min-h-[44px] min-w-[44px] rounded-xl border border-white/15 text-brand-100 hover:text-white hover:bg-white/10 transition">
             <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 1 1-1.85-2.48V9.79a5.67 5.67 0 1 0 4.9 5.62V8.87a7.35 7.35 0 0 0 4.3 1.38V7.16a4.28 4.28 0 0 1-3.2-1.34Z"/></svg>
           </a>
-          <a href="https://www.facebook.com/tukangrumahidaman" target="_blank" rel="noopener" aria-label="Facebook Binarumah - tukangrumahidaman" class="grid place-items-center w-10 h-10 rounded-xl border border-white/15 text-brand-100 hover:text-white hover:bg-white/10 transition">
+          <a href="https://www.facebook.com/tukangrumahidaman" target="_blank" rel="noopener" aria-label="Facebook Binarumah - tukangrumahidaman" class="grid place-items-center w-11 h-11 min-h-[44px] min-w-[44px] rounded-xl border border-white/15 text-brand-100 hover:text-white hover:bg-white/10 transition">
             <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.87.24-1.46 1.5-1.46h1.6V4.46A21 21 0 0 0 14.7 4.4c-2.3 0-3.9 1.4-3.9 4v2.6H8.2v3h2.6V21h2.7Z"/></svg>
           </a>
-          <a href="https://www.instagram.com/nsmdesignbuild" target="_blank" rel="noopener" aria-label="Instagram Binarumah - nsmdesignbuild" class="grid place-items-center w-10 h-10 rounded-xl border border-white/15 text-brand-100 hover:text-white hover:bg-white/10 transition">
+          <a href="https://www.instagram.com/nsmdesignbuild" target="_blank" rel="noopener" aria-label="Instagram Binarumah - nsmdesignbuild" class="grid place-items-center w-11 h-11 min-h-[44px] min-w-[44px] rounded-xl border border-white/15 text-brand-100 hover:text-white hover:bg-white/10 transition">
             <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
           </a>
         </div>
@@ -1383,7 +1389,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <iframe title="Peta lokasi pejabat Nagasaribu Consultancy (JR0190942-A) di Prima Seri Gombak, Batu Caves, Selangor"
                 src="https://www.google.com/maps?q=No.+2-105,+Jalan+Prima+SG+3%2F2,+68100+Batu+Caves,+Selangor&output=embed"
                 width="100%" height="170" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                class="w-full grayscale-[35%]"></iframe>
+                class="w-full max-w-full grayscale-[35%]"></iframe>
       </div>
       <p class="mt-3 text-[14px]">No. 2-105, Jalan Prima SG 3/2, Prima Seri Gombak<br>68100 Batu Caves, Selangor Darul Ehsan</p>
       <a href="https://wa.me/601155919344?text=Hai%20Binarumah!%20Saya%20nak%20hubungi%20pasukan%20binarumah.site." target="_blank" rel="noopener" class="mt-4 inline-flex items-center gap-2 bg-wa-600 hover:bg-wa-700 text-white font-bold px-4 py-3 rounded-xl transition">WhatsApp Kami</a>
@@ -1392,20 +1398,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="border-t border-white/10">
     <div class="wrap py-5 flex flex-col gap-2 text-[13px]">
-      <p>Hak Cipta Terpelihara &copy; <span class="tahunSemasa"></span> Binarumah.site. Dikendalikan oleh <strong class="text-white">Nagasaribu Consultancy (JR0190942-A)</strong>, entiti di bawah portal induk <a href="https://nagasaribu.online" target="_blank" rel="noopener" class="underline hover:text-white">nagasaribu.online</a>.</p>
+      <p>Hak Cipta Terpelihara &copy; <span class="tahunSemasa"></span> Binarumah.site. Dikendalikan oleh <strong class="text-white">Nagasaribu Consultancy (JR0190942-A)</strong>, anak syarikat portal <a href="https://nagasaribu.online" target="_blank" rel="noopener" class="underline hover:text-white">nagasaribu.online</a>.</p>
       <p class="text-brand-100/80">Anggaran kos di laman ini ialah rujukan pasaran, bukan sebut harga mengikat. <a href="/privacy" class="underline hover:text-white">Dasar Privasi</a> · <a href="/terms" class="underline hover:text-white">Terma &amp; Syarat</a> · WhatsApp <a href="https://wa.me/601155919344?text=Hai%20Binarumah!%20Saya%20nak%20hubungi%20pasukan%20binarumah.site." target="_blank" rel="noopener" class="underline hover:text-white">+60 11-5591 9344</a> · Isnin – Jumaat, 9:00 pagi – 5:00 petang.</p>
     </div>
   </div>
 </footer>
 
 <!-- ===== STICKY CTA MUDAH ALIH ===== -->
-<div class="mobile-sticky-cta" aria-label="Sebut harga percuma melalui WhatsApp">
-  <a href="https://wa.me/601155919344?text=Hai%20Binarumah!%20Saya%20nak%20sebut%20harga%20bina%20rumah%20di%20Selangor."
-     target="_blank" rel="noopener"
-     class="flex w-full items-center justify-center gap-2 bg-wa-600 hover:bg-wa-700 text-white font-extrabold px-5 py-3.5 rounded-xl shadow-pop transition">
-    <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.3A10 10 0 1 0 12 2Z"/></svg>
-    Sebut Harga Percuma via WhatsApp
-  </a>
+<div class="mobile-sticky-cta" aria-label="Hubungi Binarumah">
+  <div class="grid grid-cols-[auto_1fr] gap-2">
+    <a href="tel:+601155919344" aria-label="Hubungi terus +60 11-5591 9344" class="inline-flex items-center justify-center gap-1.5 px-4 py-3.5 rounded-xl border-2 border-brand-900 bg-white text-brand-900 font-extrabold text-[14px] min-h-[48px]">
+      <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></svg>
+      Telefon
+    </a>
+    <a href="https://wa.me/601155919344?text=Hai%20Binarumah!%20Saya%20nak%20sebut%20harga%20bina%20rumah%20di%20Selangor."
+       target="_blank" rel="noopener" data-lead-source="sticky_mobile_cta"
+       class="flex w-full items-center justify-center gap-2 bg-wa-600 hover:bg-wa-700 text-white font-extrabold px-5 py-3.5 rounded-xl shadow-pop transition min-h-[48px]">
+      <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.3A10 10 0 1 0 12 2Z"/></svg>
+      WhatsApp
+    </a>
+  </div>
 </div>
 
 <script>
@@ -1666,6 +1678,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       try {
         window.sessionStorage.setItem('binarumah_lead_pending', '1');
       } catch (err) {}
+
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'whatsapp_click',
+        lead_source: 'quote_form',
+        form_name: 'binarumah_quote_form',
+        page_path: '/'
+      });
 
       // Buka WhatsApp dalam tab baharu, kemudian bawa tab ini ke /success.
       window.open(base + '?text=' + t, '_blank', 'noopener');

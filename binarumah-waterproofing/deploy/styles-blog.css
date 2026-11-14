@@ -25,3 +25,21 @@ body{margin:0;background:#fff;color:#12293F;font-family:Manrope,system-ui,sans-s
   tbody tr:nth-child(even){background:#F8FAFC}
   tbody th{font-weight:800;color:#0B1F33;white-space:nowrap}
   code{background:#F1F5F9;padding:.1rem .35rem;border-radius:6px;font-size:.92em}
+  /* ===== UI/UX & MOBILE RESPONSIVENESS ===== */
+  html, body { overflow-x: clip; max-width: 100%; }
+  body { overflow-wrap: break-word; }
+  section[id] { scroll-margin-top: 5.5rem; }
+  img, iframe, video { max-width: 100%; }
+  iframe { width: 100%; }
+  input:not([type="checkbox"]):not([type="radio"]), select, textarea { font-size: 16px; }
+  .hdr-nav a, .hdr-nav .hdr-cta { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+  @media (max-width: 1023px) {
+    body { padding-bottom: 92px; }
+    .hdr-brand { min-height: 44px; }
+  }
+  @media (max-width: 480px) {
+    .hdr-row { gap: .5rem; }
+    .hdr-brand { font-size: 15px; gap: .4rem; }
+    .hdr-brand img { width: 28px !important; height: 28px !important; }
+    .hdr-nav .hdr-cta { padding: .5rem .7rem; font-size: 12.5px; }
+  }

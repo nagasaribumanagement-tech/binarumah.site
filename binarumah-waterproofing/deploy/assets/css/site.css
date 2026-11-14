@@ -4,3 +4,59 @@ html{scroll-padding-top:84px}
 @media (min-width:1280px){.xl\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media (min-width:1024px){.lg\:flex-row{flex-direction:row}.lg\:items-center{align-items:center}}
 .min-w-0{min-width:0}
+/* ===== UI/UX & MOBILE RESPONSIVENESS ===== */
+html, body { overflow-x: clip; max-width: 100%; }
+body { overflow-wrap: break-word; }
+section[id] { scroll-margin-top: 5.5rem; }
+img, iframe, video { max-width: 100%; }
+iframe { width: 100%; }
+input:not([type="checkbox"]):not([type="radio"]), select, textarea { font-size: 16px; }
+.text-base { font-size: 16px; line-height: 1.5; }
+.max-w-full { max-width: 100%; }
+.min-h-\[44px\] { min-height: 44px; }
+.min-w-\[44px\] { min-width: 44px; }
+.min-h-\[48px\] { min-height: 48px; }
+.grid-cols-\[auto_1fr\] { grid-template-columns: auto 1fr; }
+.gap-1\.5 { gap: .375rem; }
+.text-\[12\.5px\] { font-size: 12.5px; line-height: 1.5; }
+button { min-height: 44px; }
+@media (min-width: 640px) {
+  .sm\:justify-between { justify-content: space-between; }
+  .sm\:mt-12 { margin-top: 3rem; }
+  .sm\:gap-2 { gap: .5rem; }
+  .sm\:gap-4 { gap: 1rem; }
+  .sm\:py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+  .sm\:text-\[14px\] { font-size: 14px; line-height: 1.45; }
+}
+@media (min-width: 768px) {
+  .md\:hidden { display: none; }
+}
+input[type=range] { height: 8px; }
+input[type=range]::-webkit-slider-thumb { width: 24px; height: 24px; background: #F59E0B; border: 3px solid #fff; }
+input[type=range]::-moz-range-thumb { width: 24px; height: 24px; background: #F59E0B; border: 3px solid #fff; }
+.storeyBtn, .tierBtn { min-height: 44px; }
+.mobile-sticky-cta {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  display: none;
+  padding: .75rem .75rem calc(.75rem + env(safe-area-inset-bottom));
+  background: rgba(255, 255, 255, .97);
+  border-top: 1px solid #e2e8f0;
+  box-shadow: 0 -8px 24px rgba(11, 31, 51, .1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+@media (max-width: 1023px) {
+  body { padding-bottom: 92px; }
+  .mobile-sticky-cta { display: block; }
+  body.mobile-menu-open .mobile-sticky-cta { display: none; }
+  #mobileMenu a, #mobileMenu summary, .mobile-sticky-cta a { min-height: 44px; }
+  .footer-social a { min-height: 44px; min-width: 44px; }
+  #siteHeader > .wrap > a:first-child { min-height: 44px; }
+  footer a[href*="tiktok.com"],
+  footer a[href*="facebook.com"],
+  footer a[href*="instagram.com"] { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; }
+}

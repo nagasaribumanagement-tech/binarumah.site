@@ -108,5 +108,5 @@ Tidak. Zon tanah keras seperti sebahagian Bukit Raja dan Sungai Damar mungkin me
 **Bolehkah guna pinjaman LPPSA untuk bina rumah di tanah sendiri?**
 Ya. Pinjaman dilepaskan mengikut peringkat kerja. Anda perlu pelan kelulusan, sebut harga terperinci, geran tanah dan kontraktor berkelas CIDB yang sepadan dengan jumlah pinjaman.
 
-**Rumah siap dan kunci — bila CCC/CMI keluar?**
+**Rumah siap dan kunci — bila CCC keluar?**
 Biasanya 1 hingga 3 bulan selepas kerja fizik tamat, selepas arkitek dan jurutera perunding mengesahkan kerja dan menyuraikan defect.

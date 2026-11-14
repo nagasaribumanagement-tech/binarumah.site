@@ -34,7 +34,7 @@ Anggaran tempoh kelulusan di MPKj ialah **4 hingga 6 bulan**. Permohonan yang me
 
 Tiga perkara yang kerap menjadi punca penolakan atau kelewatan di MPKj:
 
-1. **Jarak sempadan dan lipingan binaan.** Banyak lot lama di Kajang mempunyai lebar hadapan 15 hingga 18 meter sahaja. Garis bangunan hadapan biasanya 6 meter, dan jumlah kawasan dibina perlu berada dalam had site coverage majlis. Rumah yang direka tanpa mematuhi had ini perlu dipinda sebelum dilulus.
+1. **Jarak sempadan dan litupan binaan.** Banyak lot lama di Kajang mempunyai lebar hadapan 15 hingga 18 meter sahaja. Garis bangunan hadapan biasanya 6 meter, dan jumlah kawasan dibina perlu berada dalam had site coverage majlis. Rumah yang direka tanpa mematuhi had ini perlu dipinda sebelum dilulus.
 2. **Saliran dan parit.** Lot yang belum disambungkan ke litar saliran awam perlu melengkapkan saliran sendiri termasuk longkang dan perangkap lumpur sebelum kelulusan diberikan.
 3. **Cerun dan tembok penahan.** Tapak miring lebih 10 darjah memerlukan reka bentuk tembok penahan oleh jurutera serta pelan pengawalan hakisan, dan biasanya dirujuk untuk semakan tambahan.
 

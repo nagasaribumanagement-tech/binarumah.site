@@ -1,7 +1,7 @@
-# binarumah.site — Nagasaribu Management
+# binarumah.site — Nagasaribu Consultancy (JR0190942-A)
 
-Laman web rasmi **binarumah.site**, dikendalikan oleh **Nagasaribu Management**
-(anak syarikat portal [nagasaribu.online](https://nagasaribu.online)).
+Laman web rasmi **binarumah.site**, dikendalikan oleh **Nagasaribu Consultancy (JR0190942-A)**
+(entiti di bawah portal induk [nagasaribu.online](https://nagasaribu.online)).
 
 ## Sumber produksi
 

@@ -1899,6 +1899,169 @@ body.has-mobile-cta {
 }
 
 /* ============================================================
+   BORANG SEBUT HARGA WATERPROOFING
+   ============================================================ */
+.quote-panel {
+  display: grid;
+  gap: 1.6rem;
+  align-items: start;
+}
+
+.quote-panel .eyebrow {
+  color: var(--accent-600);
+}
+
+.quote-panel h2 {
+  font-family: "Plus Jakarta Sans", Manrope, sans-serif;
+  font-size: clamp(1.4rem, 3.3vw, 2.05rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--brand-900);
+}
+
+.quote-panel__copy > p {
+  margin-top: .7rem;
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--brand-500);
+}
+
+.quote-facts {
+  display: grid;
+  gap: .6rem;
+  margin-top: 1.1rem;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--brand-600);
+}
+
+.quote-facts li {
+  display: flex;
+  gap: .55rem;
+}
+
+.quote-facts svg {
+  flex: none;
+  margin-top: 3px;
+  color: var(--wa-600);
+}
+
+.quote-facts strong {
+  color: var(--brand-900);
+}
+
+.quote-form {
+  display: grid;
+  gap: .9rem;
+  padding: clamp(1.2rem, 4vw, 1.8rem);
+  border: 1px solid var(--brand-100);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: var(--shadow-card);
+}
+
+.quote-form__title {
+  font-family: "Plus Jakarta Sans", Manrope, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--brand-900);
+}
+
+.wp-form__row {
+  display: grid;
+  gap: .9rem;
+}
+
+.wp-field {
+  display: grid;
+  gap: .35rem;
+}
+
+.wp-field label {
+  font-size: 12.5px;
+  font-weight: 800;
+  color: var(--brand-700);
+}
+
+.wp-field input,
+.wp-field select,
+.wp-field textarea {
+  width: 100%;
+  padding: .75rem .85rem;
+  border: 1px solid var(--brand-100);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--brand-800);
+  font: inherit;
+  font-size: 14px;
+}
+
+.wp-field textarea {
+  resize: vertical;
+}
+
+.wp-field input:focus,
+.wp-field select:focus,
+.wp-field textarea:focus {
+  outline: none;
+  border-color: var(--accent-500);
+  box-shadow: 0 0 0 3px rgba(240, 160, 32, .22);
+}
+
+.wp-consent {
+  display: flex;
+  gap: .55rem;
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--brand-600);
+}
+
+.wp-consent input {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  accent-color: var(--wa-600);
+}
+
+.wp-consent a {
+  color: var(--brand-800);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.wp-form__msg {
+  min-height: 1.25rem;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--accent-700);
+}
+
+.wp-form__msg.is-error {
+  color: #b42318;
+}
+
+.wp-form__note {
+  font-size: 11.5px;
+  line-height: 1.55;
+  color: var(--brand-500);
+}
+
+@media (min-width: 560px) {
+  .wp-form__row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .quote-panel {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* ============================================================
    AKSESIBILITI / MOTION
    ============================================================ */
 @media (prefers-reduced-motion: reduce) {

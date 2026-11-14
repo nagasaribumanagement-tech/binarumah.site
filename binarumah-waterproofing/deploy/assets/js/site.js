@@ -151,6 +151,75 @@
     });
   }
 
+  /* ---------- Borang sebut harga waterproofing ---------- */
+  var wpLead = document.getElementById("wpLeadForm");
+  if (wpLead) {
+    wpLead.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      var nama = document.getElementById("wpNama");
+      var tel = document.getElementById("wpTel");
+      var consent = document.getElementById("wpConsent");
+      var msgEl = document.getElementById("wpLeadMsg");
+      var namaVal = nama ? nama.value.trim() : "";
+      var telVal = tel ? tel.value.trim() : "";
+
+      function showError(message) {
+        if (!msgEl) return;
+        msgEl.textContent = message;
+        msgEl.classList.add("is-error");
+      }
+
+      if (!namaVal || !telVal) {
+        showError("Sila isi nama dan nombor telefon supaya kami boleh menghubungi anda.");
+        if (namaVal && tel) {
+          tel.focus();
+        } else if (nama) {
+          nama.focus();
+        }
+        return;
+      }
+
+      if (!consent || !consent.checked) {
+        showError("Sila tandakan persetujuan Dasar Privasi dan Terma & Syarat sebelum menghantar.");
+        if (consent) consent.focus();
+        return;
+      }
+
+      var kawasan = document.getElementById("wpKawasan");
+      var jenis = document.getElementById("wpJenis");
+      var mesej = document.getElementById("wpMesej");
+
+      var text =
+        "Hai Binarumah! Saya nak sebut harga Sistem Waterproofing.%0A%0A" +
+        "Nama: " + encodeURIComponent(namaVal) + "%0A" +
+        "Telefon: " + encodeURIComponent(telVal) + "%0A" +
+        "Kawasan: " + encodeURIComponent(kawasan ? kawasan.value : "-") + "%0A" +
+        "Jenis masalah: " + encodeURIComponent(jenis ? jenis.value : "-") + "%0A" +
+        "Keterangan: " + encodeURIComponent((mesej && mesej.value.trim()) || "-") + "%0A%0A" +
+        "Saya mohon lawatan tapak dan sebut harga bertulis.";
+
+      if (msgEl) {
+        msgEl.classList.remove("is-error");
+        msgEl.textContent = "Berjaya! Membuka WhatsApp dan mengalihkan anda ke halaman terima kasih…";
+      }
+
+      // Tandakan penghantaran sah sebelum redirect. Halaman /success hanya
+      // melepaskan konversi jika tanda ini wujud, supaya lawatan terus atau
+      // refresh tidak dikira sebagai konversi.
+      try {
+        window.sessionStorage.setItem("binarumah_lead_pending", "1");
+      } catch (err) {}
+
+      // Buka WhatsApp dalam tab baharu, kemudian bawa tab ini ke /success.
+      window.open("https://wa.me/601155919344?text=" + text, "_blank", "noopener");
+
+      window.setTimeout(function () {
+        window.location.assign("/success");
+      }, 450);
+    });
+  }
+
   /* ---------- Tahun semasa di footer ---------- */
   document.querySelectorAll("[data-year]").forEach(function (el) {
     el.textContent = String(new Date().getFullYear());

@@ -204,11 +204,24 @@
         msgEl.textContent = "Berjaya! Membuka WhatsApp dan mengalihkan anda ke halaman terima kasih…";
       }
 
-      // Tandakan penghantaran sah sebelum redirect. Halaman /success hanya
-      // melepaskan konversi jika tanda ini wujud, supaya lawatan terus atau
-      // refresh tidak dikira sebagai konversi.
+      // Konversi dihantar di sini, sebelum redirect. Halaman /success tidak
+      // lagi push generate_lead supaya tiada double tracking.
+      var pagePath = window.location.pathname.replace(/\/index\.html$/i, "/").replace(/\.html$/i, "");
+      if (pagePath.length > 1) pagePath = pagePath.replace(/\/+$/, "");
+
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "generate_lead",
+        form_name: "binarumah_quote_form",
+        form_location: "waterproofing_quote_form",
+        lead_source: "wp_lead_form",
+        page_path: pagePath || "/"
+      });
+
+      // Buang tanda lama (jika ada) supaya halaman /success versi cache
+      // tidak mencetuskan konversi kedua.
       try {
-        window.sessionStorage.setItem("binarumah_lead_pending", "1");
+        window.sessionStorage.removeItem("binarumah_lead_pending");
       } catch (err) {}
 
       // Buka WhatsApp dalam tab baharu, kemudian bawa tab ini ke /success.

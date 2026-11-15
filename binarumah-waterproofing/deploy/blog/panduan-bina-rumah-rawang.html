@@ -51,7 +51,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 </style>
 </head>
-<body data-page-path="/blog/panduan-bina-rumah-rawang.html">
+<body data-page-path="/blog/panduan-bina-rumah-rawang">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MSG537M5"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -259,7 +259,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
 (function () {
   'use strict';
-  var PAGE_PATH = '/blog/panduan-bina-rumah-rawang.html';
+  var PAGE_PATH = '/blog/panduan-bina-rumah-rawang';
   var form = document.getElementById('blogLeadForm');
   if (!form) return;
 
@@ -295,16 +295,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       'Keterangan: ' + encodeURIComponent(mesej || '-') + '%0A%0A' +
       'Saya mohon lawatan tapak dan sebut harga bertulis.';
 
-    try {
-      window.sessionStorage.setItem('binarumah_lead_pending', '1');
-    } catch (err) {}
-
+    // Konversi dihantar di sini, sebelum redirect. Halaman /success tidak
+    // lagi push generate_lead supaya tiada double tracking.
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
-      event: 'whatsapp_click',
+      event: 'generate_lead',
+      form_name: 'binarumah_quote_form',
+      form_location: 'blog_quote_form',
       lead_source: 'blog_lead_form',
       page_path: PAGE_PATH
     });
+
+    // Buang tanda lama (jika ada) supaya halaman /success versi cache
+    // tidak mencetuskan konversi kedua.
+    try {
+      window.sessionStorage.removeItem('binarumah_lead_pending');
+    } catch (err) {}
 
     msgEl.textContent = 'Berjaya! Membuka WhatsApp dan mengalihkan anda ke halaman terima kasih…';
     window.open('https://wa.me/601155919344?text=' + text, '_blank', 'noopener');

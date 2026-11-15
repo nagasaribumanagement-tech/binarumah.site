@@ -226,19 +226,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script src="assets/js/tracking.js" defer></script>
 <script src="assets/js/pages.js"></script>
-<script>
-  // Hanya push event jika pelawat datang daripada borang yang sah.
-  // GTM-MSG537M5 akan trigger tag GA4/Google Ads berdasarkan event ini.
-  // Lawatan terus ke /success atau refresh tidak akan push event.
-  try {
-    if (window.sessionStorage.getItem('binarumah_lead_pending') === '1') {
-      window.sessionStorage.removeItem('binarumah_lead_pending');
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ event: 'generate_lead', form_name: 'binarumah_quote_form', form_location: 'binarumah_quote_form' });
-    }
-  } catch (err) {
-    // sessionStorage disekat: jangan push event yang tidak dapat disahkan.
-  }
-</script>
+<!-- generate_lead dihantar oleh borang sebelum redirect ke halaman ini.
+     Jangan push event konversi di sini supaya tiada double tracking. -->
 </body>
 </html>

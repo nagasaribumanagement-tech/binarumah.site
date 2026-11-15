@@ -1046,16 +1046,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         'Keterangan: ' + encodeURIComponent(keterangan || '-') + '%0A%0A' +
         'Saya mohon pemeriksaan tapak percuma dan sebut harga bertulis.';
 
-      try {
-        window.sessionStorage.setItem('binarumah_lead_pending', '1');
-      } catch (err) {}
-
+      // Konversi dihantar di sini, sebelum redirect. Halaman /success tidak
+      // lagi push generate_lead supaya tiada double tracking.
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
-        event: 'whatsapp_click',
+        event: 'generate_lead',
+        form_name: 'binarumah_quote_form',
+        form_location: 'waterproofing_quote_form',
         lead_source: 'wp_lead_form',
         page_path: PAGE_PATH
       });
+
+      // Buang tanda lama (jika ada) supaya halaman /success versi cache
+      // tidak mencetuskan konversi kedua.
+      try {
+        window.sessionStorage.removeItem('binarumah_lead_pending');
+      } catch (err) {}
 
       msgEl.textContent = 'Berjaya! Membuka WhatsApp dan mengalihkan anda ke halaman terima kasih…';
       window.open('https://wa.me/601155919344?text=' + text, '_blank', 'noopener');

@@ -25,7 +25,7 @@ binarumah-waterproofing/
 │   ├── privacy.html           ← /privacy
 │   ├── terms.html             ← /terms
 │   ├── 404.html
-│   ├── blog/                  ← 4 panduan daerah
+│   ├── blog/                  ← 7 panduan daerah
 │   ├── assets/css|js/
 │   ├── images/
 │   ├── sitemap.xml
@@ -51,38 +51,49 @@ tools/build-blog.js            ← penjana blog (legacy; semak template sebelum 
 
 `privasi.html` ialah redirect lama ke `/privacy`.
 
-## Conversion tracking (GTM sahaja)
+## Penjejakan (GTM sahaja)
 
 Semua tag Google dikonfigurasi di dalam **Google Tag Manager**:
 
 - Container: **`GTM-MSG537M5`**
 - GA4 Measurement ID: **`G-RYK3F6GNT0`**
 - Google Ads Conversion ID: **`AW-18567463725`**
-- Conversion label: ditetapkan dalam tag Google Ads di dalam GTM
+- Label konversi: ditetapkan dalam tag Google Ads di dalam GTM
 
-Tiada lagi `gtag/js`, `gtag('config', ...)`, `window.BINARUMAH_TRACKING`,
-atau `tracking.js` dimuatkan dalam mana-mana halaman HTML. Halaman utama
-(index, waterproofing, success, privacy, terms) dan 4 halaman blog hanya
-menggunakan snippet GTM.
+Tiada `gtag/js`, `gtag('config', ...)`, atau tag Google hardcoded dalam HTML.
+Semua halaman produksi hanya memuatkan snippet GTM-MSG537M5 (head + noscript)
+dan `assets/js/tracking.js` untuk menghantar event ke `dataLayer`.
+
+> **Status Google Ads (15 Nov 2026):** kontena GTM-MSG537M5 yang diterbitkan
+> hanya mengandungi tag GA4 `G-RYK3F6GNT0`. ID `AW-18567463725` **belum ada**
+> dalam kontena, dan tiada trigger untuk `whatsapp_click`/`generate_lead`.
+> Ini punca Google Ads melaporkan *"Your website is missing a Google tag"*.
+> Langkah menambah tag dan trigger ada dalam [`TRACKING.md`](TRACKING.md).
+> Jangan tambah `gtag.js` dalam HTML untuk "membaiki" ralat ini.
+
+### Event dataLayer
+
+| Event | Bila dicetuskan | Parameter |
+|---|---|---|
+| `whatsapp_click` | Klik mana-mana pautan WhatsApp atau butang `#waBtn` | `lead_source`, `section_id`, `page_path`, `link_text`, `link_url` |
+| `generate_lead` | Borang sebut harga disahkan, **sebelum** redirect ke `/success` | `form_name`, `form_location`, `lead_source`, `page_path` |
 
 Aliran konversi:
 
-1. Borang `#leadForm` disahkan (nama, telefon, persetujuan PDPA).
-2. Butiran dibuka dalam WhatsApp dengan mesej pra-isi.
-3. `sessionStorage.binarumah_lead_pending = '1'` ditetapkan.
+1. Borang sebut harga disahkan (nama, telefon, persetujuan PDPA).
+2. `generate_lead` di-push ke `dataLayer` sebelum redirect.
+3. Butiran dibuka dalam WhatsApp dengan mesej pra-isi.
 4. Pelawat dialihkan ke `/success`.
-5. `success.html` hanya push event ini jika tanda pending wujud, kemudian memadamnya:
-
-```js
-window.dataLayer.push({ event: 'generate_lead', form_location: 'binarumah_quote_form' });
-```
-
+5. `/success` **tidak** push `generate_lead`; lawatan terus, refresh atau
+   crawler tidak dikira sebagai konversi.
 6. Dalam GTM, trigger `generate_lead` digunakan untuk tag GA4 dan Google Ads
    (termasuk conversion label).
-7. Lawatan terus ke `/success`, refresh, atau crawler **tidak** push event.
+7. `whatsapp_click` ditangkap oleh `tracking.js` melalui event delegation;
+   tiada handler inline berganda pada halaman yang sama.
 
-> Jangan tambah tag gtag/GA4/Google Ads secara langsung dalam HTML. Semua
-> pengukuran mesti melalui GTM supaya tiada page_view atau konversi berganda.
+> Jangan push `generate_lead` di `/success` dan jangan push `whatsapp_click`
+> semasa submit borang. Satu interaksi = satu event. Jangan tambah tag
+> gtag/GA4/Google Ads secara langsung dalam HTML.
 
 ## Deploy ke Cloudflare Worker
 
@@ -117,8 +128,10 @@ Nota: jangan deploy dari folder `binarumah-waterproofing/deploy/` secara berasin
 
 ## Semakan sebelum publish
 
-- [ ] Konfigurasi tag GA4 + Google Ads (termasuk conversion label) dalam GTM-MSG537M5.
-- [ ] Uji hantar borang: `/success` mesti dibuka dan konversi hanya sekali.
+- [ ] Pastikan Google tag `AW-18567463725` wujud dalam GTM-MSG537M5 dan container sudah diterbitkan.
+- [ ] Pastikan trigger Custom Event `whatsapp_click` dan `generate_lead` wujud dalam GTM.
+- [ ] Uji hantar borang: tepat satu `generate_lead` di dataLayer sebelum redirect; `/success` tidak push event.
+- [ ] Uji klik WhatsApp: `whatsapp_click` dihantar dengan `lead_source` dan `page_path` yang betul.
 - [ ] Uji `/privacy`, `/terms`, `/success`, `/waterproofing` (HTTP 200, bukan 404).
 - [ ] Uji galeri pada 390px, 768px, 1440px — kad 4:3, tinggi seragam.
 - [ ] Uji poster promosi — `object-fit: contain`, teks tidak terpotong.

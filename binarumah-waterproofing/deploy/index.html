@@ -1672,20 +1672,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         'Keperluan: ' + encodeURIComponent(document.getElementById('mesy').value || '-') + '%0A%0A' +
         'Saya mohon sebut harga percuma.';
 
-      // Tandakan penghantaran sah sebelum redirect. Halaman /success hanya
-      // melepaskan konversi jika tanda ini wujud, supaya lawatan terus atau
-      // refresh tidak dikira sebagai konversi.
-      try {
-        window.sessionStorage.setItem('binarumah_lead_pending', '1');
-      } catch (err) {}
-
+      // Konversi dihantar di sini, sebelum redirect. Halaman /success tidak
+      // lagi push generate_lead supaya tiada double tracking.
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
-        event: 'whatsapp_click',
-        lead_source: 'quote_form',
+        event: 'generate_lead',
         form_name: 'binarumah_quote_form',
+        form_location: 'homepage_quote_form',
+        lead_source: 'quote_form',
         page_path: '/'
       });
+
+      // Buang tanda lama (jika ada) supaya halaman /success versi cache
+      // tidak mencetuskan konversi kedua.
+      try {
+        window.sessionStorage.removeItem('binarumah_lead_pending');
+      } catch (err) {}
 
       // Buka WhatsApp dalam tab baharu, kemudian bawa tab ini ke /success.
       window.open(base + '?text=' + t, '_blank', 'noopener');

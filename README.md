@@ -55,20 +55,20 @@ tools/build-blog.js            ← penjana blog (legacy; semak template sebelum 
 
 Semua tag Google dikonfigurasi di dalam **Google Tag Manager**:
 
-- Container: **`GTM-MSG537M5`**
+- Container: **`GTM-559HHV25`**
 - GA4 Measurement ID: **`G-RYK3F6GNT0`**
 - Google Ads Conversion ID: **`AW-18567463725`**
 - Label konversi: ditetapkan dalam tag Google Ads di dalam GTM
 
 Tiada `gtag/js`, `gtag('config', ...)`, atau tag Google hardcoded dalam HTML.
-Semua halaman produksi hanya memuatkan snippet GTM-MSG537M5 (head + noscript)
+Semua halaman produksi hanya memuatkan snippet GTM-559HHV25 (head + noscript)
 dan `assets/js/tracking.js` untuk menghantar event ke `dataLayer`.
 
-> **Status Google Ads (15 Nov 2026):** kontena GTM-MSG537M5 yang diterbitkan
-> hanya mengandungi tag GA4 `G-RYK3F6GNT0`. ID `AW-18567463725` **belum ada**
-> dalam kontena, dan tiada trigger untuk `whatsapp_click`/`generate_lead`.
-> Ini punca Google Ads melaporkan *"Your website is missing a Google tag"*.
-> Langkah menambah tag dan trigger ada dalam [`TRACKING.md`](TRACKING.md).
+> **Status kontena (15 Nov 2026):** `GTM-559HHV25` ialah kontena baharu dan
+> masih **kosong** — belum ada tag GA4 `G-RYK3F6GNT0`, tag Google Ads
+> `AW-18567463725`, atau trigger `whatsapp_click`/`generate_lead`.
+> Sehingga tag ini ditambah dan container diterbitkan, tiada hit GA4/Ads
+> akan dihantar. Langkah lengkap ada dalam [`TRACKING.md`](TRACKING.md).
 > Jangan tambah `gtag.js` dalam HTML untuk "membaiki" ralat ini.
 
 ### Event dataLayer
@@ -128,7 +128,7 @@ Nota: jangan deploy dari folder `binarumah-waterproofing/deploy/` secara berasin
 
 ## Semakan sebelum publish
 
-- [ ] Pastikan Google tag `AW-18567463725` wujud dalam GTM-MSG537M5 dan container sudah diterbitkan.
+- [ ] Pastikan Google tag `AW-18567463725` wujud dalam GTM-559HHV25 dan container sudah diterbitkan.
 - [ ] Pastikan trigger Custom Event `whatsapp_click` dan `generate_lead` wujud dalam GTM.
 - [ ] Uji hantar borang: tepat satu `generate_lead` di dataLayer sebelum redirect; `/success` tidak push event.
 - [ ] Uji klik WhatsApp: `whatsapp_click` dihantar dengan `lead_source` dan `page_path` yang betul.

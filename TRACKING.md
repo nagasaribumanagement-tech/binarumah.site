@@ -6,10 +6,10 @@ legacy dan **tidak** di-deploy.
 
 ## 1. Seni bina
 
-- **GTM-only.** HTML hanya memuatkan snippet `GTM-MSG537M5` (head + noscript)
+- **GTM-only.** HTML hanya memuatkan snippet `GTM-559HHV25` (head + noscript)
   dan `assets/js/tracking.js`. Tiada `gtag.js`, `gtag('config', ...)`, GA4,
   atau Google Ads hardcoded dalam HTML.
-- **Satu container:** `GTM-MSG537M5`
+- **Satu container:** `GTM-559HHV25`
 - **GA4:** `G-RYK3F6GNT0`
 - **Google Ads:** `AW-18567463725`
 - `tracking.js` hanya menulis ke `window.dataLayer`; GTM yang menghantar tag.
@@ -23,13 +23,15 @@ legacy dan **tidak** di-deploy.
 | `gtag/js` atau `gtag('config', ...)` hardcoded | ✅ tiada |
 | `tracking.js` dimuatkan pada halaman kandungan | ✅ |
 | `window.dataLayer` diinisialisasi oleh snippet GTM sebelum `gtm.js` | ✅ |
-| Tag `AW-18567463725` dalam container GTM yang diterbitkan | ❌ **tiada** |
-| Trigger `whatsapp_click` / `generate_lead` dalam GTM | ❌ **tiada** |
+| Tag dalam container `GTM-559HHV25` yang diterbitkan | ❌ **kosong** (`"tags":[]`) |
+| Tag `AW-18567463725` dalam container | ❌ **tiada** |
+| Trigger `whatsapp_click` / `generate_lead` | ❌ **tiada** |
 
-Container GTM yang diterbitkan hanya mengandungi tag GA4 `G-RYK3F6GNT0`
-(termasuk enhanced measurement). Ini sebab Google Ads melaporkan
-**"Your website is missing a Google tag"**: tiada tag Google Ads `AW-...`
-yang dimuatkan di laman.
+Kontena `GTM-559HHV25` yang diterbitkan masih kosong. Kontena lama hanya
+mempunyai tag GA4 `G-RYK3F6GNT0` (tanpa tag Google Ads). Selepas pertukaran ID,
+**tiada tag GA4 atau Google Ads berjalan** sehingga tag dan trigger
+dikonfigurasi dalam kontena baharu. Ini juga sebab Google Ads melaporkan
+**"Your website is missing a Google tag"**.
 
 > Perubahan kod **tidak boleh** menambah tag Google Ads tanpa melanggar
 > seni bina GTM-only. Tag mesti ditambah dalam GTM dan container diterbitkan.
@@ -83,33 +85,40 @@ klik berganda tidak mencetuskan dua `generate_lead`.
 Semua langkah di bawah dibuat dalam UI Google Tag Manager, kemudian
 **Submit → Publish**.
 
-### 4.1 Google tag Google Ads (selesaikan "missing Google tag")
+### 4.1 Google tag GA4 (asas)
 
-Pilihan A — tag berasingan:
+1. **Tags → New → Google tag**.
+2. **Tag ID:** `G-RYK3F6GNT0`.
+3. **Triggering:** `Initialization - All Pages` (atau `All Pages`).
+4. Simpan.
+
+### 4.2 Google tag Google Ads
+
+Pilihan A — tambah sebagai destination pada Google tag 4.1 (disyorkan):
+
+1. Buka Google tag yang memuatkan `G-RYK3F6GNT0`.
+2. **Configuration → Add destination** → `AW-18567463725`.
+3. Simpan.
+
+Pilihan B — tag Google Ads berasingan:
 
 1. **Tags → New → Google tag**.
 2. **Tag ID:** `AW-18567463725`.
 3. **Triggering:** `Initialization - All Pages` (atau `All Pages`).
-4. Simpan dan **Publish**.
-
-Pilihan B — tambah sebagai destination pada Google tag sedia ada:
-
-1. Buka Google tag yang memuatkan `G-RYK3F6GNT0`.
-2. **Configuration → Add destination** → `AW-18567463725`.
-3. Simpan dan **Publish**.
+4. Simpan.
 
 Jangan buat Pilihan A dan B serentak; pilih satu sahaja.
 
-### 4.2 Tag GA4 untuk `whatsapp_click`
+### 4.3 Tag GA4 untuk `whatsapp_click`
 
 1. **Tags → New → Google Analytics: GA4 Event**.
 2. Measurement ID: `G-RYK3F6GNT0`.
 3. Event name: `whatsapp_click`.
 4. Parameter: `lead_source`, `section_id`, `page_path`, `link_text`, `link_url`.
 5. Trigger: **Custom Event** → `whatsapp_click`.
-6. Publish.
+6. Simpan.
 
-### 4.3 Tag GA4 untuk `generate_lead`
+### 4.4 Tag GA4 untuk `generate_lead`
 
 1. **Tags → New → Google Analytics: GA4 Event**.
 2. Measurement ID: `G-RYK3F6GNT0`.
@@ -117,9 +126,9 @@ Jangan buat Pilihan A dan B serentak; pilih satu sahaja.
 4. Parameter: `form_name`, `form_location`, `lead_source`, `page_path`.
 5. Trigger: **Custom Event** → `generate_lead`.
 6. Tandakan event ini sebagai conversion dalam GA4 jika perlu.
-7. Publish.
+7. Simpan.
 
-### 4.4 Tag konversi Google Ads
+### 4.5 Tag konversi Google Ads
 
 1. **Tags → New → Google Ads Conversion Tracking**.
 2. Conversion ID: `AW-18567463725`.

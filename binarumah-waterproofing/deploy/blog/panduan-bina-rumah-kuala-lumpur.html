@@ -266,6 +266,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   form.addEventListener('submit', function (event) {
     event.preventDefault();
+    if (form.getAttribute('data-submitting') === '1') return;
 
     var nama = document.getElementById('leadNama').value.trim();
     var tel = document.getElementById('leadTel').value.trim();
@@ -298,6 +299,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     // Konversi dihantar di sini, sebelum redirect. Halaman /success tidak
     // lagi push generate_lead supaya tiada double tracking.
+    form.setAttribute('data-submitting', '1');
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       event: 'generate_lead',

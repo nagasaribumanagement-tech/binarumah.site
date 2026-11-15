@@ -156,6 +156,7 @@
   if (wpLead) {
     wpLead.addEventListener("submit", function (event) {
       event.preventDefault();
+      if (wpLead.getAttribute("data-submitting") === "1") return;
 
       var nama = document.getElementById("wpNama");
       var tel = document.getElementById("wpTel");
@@ -206,6 +207,8 @@
 
       // Konversi dihantar di sini, sebelum redirect. Halaman /success tidak
       // lagi push generate_lead supaya tiada double tracking.
+      wpLead.setAttribute("data-submitting", "1");
+
       var pagePath = window.location.pathname.replace(/\/index\.html$/i, "/").replace(/\.html$/i, "");
       if (pagePath.length > 1) pagePath = pagePath.replace(/\/+$/, "");
 

@@ -75,6 +75,8 @@ Parameter: `event`, `form_name` (`binarumah_quote_form`), `form_location`,
 `/success` **tidak** push `generate_lead`. Lawatan terus, refresh, atau crawler
 tidak dikira sebagai konversi. Tanda lama `sessionStorage.binarumah_lead_pending`
 hanya dibuang untuk mengelakkan konversi berganda daripada halaman cache lama.
+Setiap borang juga dikunci dengan `data-submitting="1"` selepas submit supaya
+klik berganda tidak mencetuskan dua `generate_lead`.
 
 ## 4. Konfigurasi GTM yang diperlukan
 

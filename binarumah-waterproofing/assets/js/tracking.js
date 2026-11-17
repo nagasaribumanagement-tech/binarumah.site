@@ -2,7 +2,7 @@
    BINARUMAH.SITE — WhatsApp click tracking (GTM-only)
    - Memantau semua pautan WhatsApp dan butang #waBtn.
    - Push `whatsapp_click` ke dataLayer tanpa menyekat navigasi.
-   - Tiada gtag/GA4/Google Ads hardcoded di sini; GTM-MSG537M5
+   - Tiada gtag/GA4/Google Ads hardcoded di sini; GTM-559HHV25
      yang menghantar tag berdasarkan event ini.
    ============================================================ */
 (function () {

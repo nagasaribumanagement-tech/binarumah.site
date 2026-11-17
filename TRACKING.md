@@ -6,10 +6,10 @@ legacy dan **tidak** di-deploy.
 
 ## 1. Seni bina
 
-- **GTM-only.** HTML hanya memuatkan snippet `GTM-MSG537M5` (head + noscript)
+- **GTM-only.** HTML hanya memuatkan snippet `GTM-559HHV25` (head + noscript)
   dan `assets/js/tracking.js`. Tiada `gtag.js`, `gtag('config', ...)`, GA4,
   atau Google Ads hardcoded dalam HTML.
-- **Satu container:** `GTM-MSG537M5`
+- **Satu container:** `GTM-559HHV25`
 - **GA4:** `G-RYK3F6GNT0`
 - **Google Ads:** `AW-18567463725`
 - `tracking.js` hanya menulis ke `window.dataLayer`; GTM yang menghantar tag.
@@ -23,12 +23,12 @@ legacy dan **tidak** di-deploy.
 | `gtag/js` atau `gtag('config', ...)` hardcoded | ✅ tiada |
 | `tracking.js` dimuatkan pada halaman kandungan | ✅ |
 | `window.dataLayer` diinisialisasi oleh snippet GTM sebelum `gtm.js` | ✅ |
-| Tag dalam container `GTM-MSG537M5` yang diterbitkan | ⚠️ perlu disahkan dalam UI GTM |
+| Tag dalam container `GTM-559HHV25` yang diterbitkan | ⚠️ perlu disahkan dalam UI GTM |
 | Tag `AW-18567463725` dalam container | ⚠️ perlu disahkan dalam UI GTM |
 | Trigger `whatsapp_click` / `generate_lead` | ⚠️ perlu disahkan dalam UI GTM |
 
 Audit kod ini hanya mengesahkan snippet dan event pada halaman. Konfigurasi
-tag, trigger dan versi container `GTM-MSG537M5` mesti disemak dalam UI Google
+tag, trigger dan versi container `GTM-559HHV25` mesti disemak dalam UI Google
 Tag Manager sebelum diterbitkan. Tanpa tag GA4/Ads yang diterbitkan, tiada hit
 GA4 atau Google Ads akan dihantar walaupun event `dataLayer` betul.
 

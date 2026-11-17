@@ -56,18 +56,18 @@ tools/build-blog.js            ← penjana blog (legacy; semak template sebelum 
 
 Semua tag Google dikonfigurasi di dalam **Google Tag Manager**:
 
-- Container: **`GTM-MSG537M5`**
+- Container: **`GTM-559HHV25`**
 - GA4 Measurement ID: **`G-RYK3F6GNT0`**
 - Google Ads Conversion ID: **`AW-18567463725`**
 - Label konversi: ditetapkan dalam tag Google Ads di dalam GTM
 
 Tiada `gtag/js`, `gtag('config', ...)`, atau tag Google hardcoded dalam HTML.
-Semua halaman produksi hanya memuatkan snippet GTM-MSG537M5 (head + noscript)
+Semua halaman produksi hanya memuatkan snippet GTM-559HHV25 (head + noscript)
 dan `assets/js/tracking.js` untuk menghantar event ke `dataLayer`.
 
 > **Nota konfigurasi:** Pastikan tag GA4 `G-RYK3F6GNT0`, tag Google Ads
 > `AW-18567463725`, dan trigger `whatsapp_click`/`generate_lead` telah
-> dikonfigurasi serta diterbitkan dalam container `GTM-MSG537M5` sebelum
+> dikonfigurasi serta diterbitkan dalam container `GTM-559HHV25` sebelum
 > menganggap penjejakan lengkap. Langkah penuh ada dalam
 > [`TRACKING.md`](TRACKING.md). Jangan tambah `gtag.js` dalam HTML untuk
 > "membaiki" konfigurasi GTM.
@@ -129,7 +129,7 @@ Nota: jangan deploy dari folder `binarumah-waterproofing/deploy/` secara berasin
 
 ## Semakan sebelum publish
 
-- [ ] Pastikan Google tag `AW-18567463725` wujud dalam GTM-MSG537M5 dan container sudah diterbitkan.
+- [ ] Pastikan Google tag `AW-18567463725` wujud dalam GTM-559HHV25 dan container sudah diterbitkan.
 - [ ] Pastikan trigger Custom Event `whatsapp_click` dan `generate_lead` wujud dalam GTM.
 - [ ] Uji hantar borang: tepat satu `generate_lead` di dataLayer sebelum redirect; `/success` tidak push event.
 - [ ] Uji klik WhatsApp: `whatsapp_click` dihantar dengan `lead_source` dan `page_path` yang betul.

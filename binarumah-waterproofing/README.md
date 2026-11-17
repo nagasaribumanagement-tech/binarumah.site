@@ -38,7 +38,7 @@ binarumah-waterproofing/
 │   │   ├── js/site.js               ← menu landing page + reveal-on-scroll
 │   │   └── js/nav-dropdown.js       ← dropdown homepage
 │   ├── images/                      ← semua imej produksi
-│   └── blog/, privasi.html, 404.html, robots.txt, _headers
+│   └── blog/, _redirects, 404.html, robots.txt, _headers
 ├── index.html                       ← demo homepage lama (rujukan UI)
 ├── waterproofing.html               ← salinan landing page terkini
 ├── assets/, images/                 ← salinan aset terkini
@@ -215,7 +215,9 @@ Kod menggunakan nombor sedia ada laman:
 - WhatsApp: `https://wa.me/601155919344`
 - Telefon: `+60 11-5591 9344`
 - E-mel: `sales@nagasaribu.online`
-- Alamat: No. 2-105, Jalan Prima SG 3/2, Prima Seri Gombak, 68100 Batu Caves, Selangor
+- Alamat: Prima Seri Gombak, 68100 Batu Caves, Selangor
+- Waktu operasi: Isnin – Sabtu, 9:00 pagi – 6:00 petang (Tutup pada Ahad & Cuti Umum)
+- Kawasan liputan: Selangor & Kuala Lumpur sahaja
 
 Jika nombor bertukar, cari-ganti `601155919344` dan `+601155919344`
 di kedua-dua fail HTML serta snippet.

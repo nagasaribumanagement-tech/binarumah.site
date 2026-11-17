@@ -1,0 +1,3 @@
+# Redirect kekal halaman privasi lama ke /privacy
+/privasi.html /privacy 301
+/privasi /privacy 301

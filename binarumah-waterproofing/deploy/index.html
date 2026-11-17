@@ -274,6 +274,72 @@ html, body { overflow-x: clip; max-width: 100%; }
     body.mobile-menu-open .mobile-sticky-cta { display: none; }
   }
 
+  /* Hero: copywriting pemilik tanah Selangor & KL */
+  .hero-copy .hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: .11em;
+    line-height: 1.55;
+  }
+  .hero-copy .hero-title {
+    font-size: clamp(1.9rem, 4.8vw, 3.1rem);
+    line-height: 1.08;
+    text-wrap: balance;
+  }
+  .hero-copy .hero-sub {
+    font-size: 17px;
+    line-height: 1.65;
+  }
+  .hero-copy .hero-actions a {
+    min-height: 52px;
+    text-align: center;
+  }
+  .hero-copy .hero-proof__item {
+    min-height: 100%;
+  }
+  @media (max-width: 639px) {
+    .hero-copy {
+      padding-top: 2rem;
+      padding-bottom: 2.25rem;
+    }
+    .hero-copy .hero-eyebrow {
+      font-size: 10.5px;
+      letter-spacing: .07em;
+      margin-bottom: .75rem;
+    }
+    .hero-copy .hero-title {
+      font-size: clamp(1.65rem, 7.2vw, 2.15rem);
+      line-height: 1.12;
+    }
+    .hero-copy .hero-sub {
+      font-size: 15px;
+      line-height: 1.6;
+      margin-top: .9rem;
+    }
+    .hero-copy .hero-actions {
+      margin-top: 1.25rem;
+      gap: .6rem;
+    }
+    .hero-copy .hero-actions a {
+      padding-top: .8rem;
+      padding-bottom: .8rem;
+      font-size: 14.5px;
+    }
+    .hero-copy .hero-proof {
+      margin-top: 1.5rem;
+      gap: .5rem;
+    }
+    .hero-copy .hero-proof__item {
+      padding: .7rem .8rem;
+    }
+    .hero-copy .hero-proof__item .hero-proof__title {
+      font-size: 13px;
+    }
+    .hero-copy .hero-proof__item .hero-proof__desc {
+      font-size: 11.5px;
+      line-height: 1.45;
+    }
+  }
+
   /* Kalkulator: pastikan pilihan spesifikasi kekal 3 lajur pada semua lebar */
   #kira-kos .grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   @media (max-width: 359px) {
@@ -473,55 +539,61 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
        class="absolute inset-0 w-full h-full object-cover">
   <div class="absolute inset-0 bg-gradient-to-r from-brand-900 via-brand-900/85 to-brand-900/35" aria-hidden="true"></div>
 
-  <div class="wrap relative py-12 sm:py-20 lg:py-28">
+  <div class="wrap relative py-12 sm:py-20 lg:py-28 hero-copy">
     <div class="max-w-2xl">
-      <p class="eyebrow text-accent-400 mb-4">Kontraktor Bina Rumah Atas Tanah Sendiri · Selangor &amp; KL</p>
-      <h1 class="font-display font-extrabold text-[clamp(1.9rem,5.2vw,3.35rem)] leading-[1.1]">
-        Kontraktor Bina Rumah Atas Tanah Sendiri di Selangor &amp; KL
+      <p class="eyebrow text-accent-400 mb-4 hero-eyebrow">KONTRAKTOR BINA RUMAH ATAS TANAH SENDIRI — SELANGOR &amp; KUALA LUMPUR</p>
+      <h1 class="font-display font-extrabold text-[clamp(1.9rem,5.2vw,3.35rem)] leading-[1.1] hero-title">
+        Bina Banglo Impian Atas Tanah Sendiri Tanpa Risiko Kos Tersembunyi &amp; Saman PBT.
       </h1>
-      <p class="mt-5 text-[17px] sm:text-xl text-brand-100 leading-relaxed">
-        Dari lukisan pelan 3D, kelulusan PBT hingga kunci di tangan — diurus satu pintu dengan sebut harga bertulis, bayaran berperingkat ikut progres tapak, dan jaminan struktur 10 tahun.
+      <p class="mt-5 text-[17px] sm:text-xl text-brand-100 leading-relaxed hero-sub">
+        Dari lukisan pelan 3D, urusan kelulusan MBSA, MPK &amp; DBKL hingga penyerahan kunci. Kami uruskan pembinaan rumah anda secara telus bermula <strong>RM125/kps</strong> dengan sebut harga <em>item-by-item</em>.
       </p>
 
-      <p class="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-[15px] font-semibold text-accent-400">
-        <span>✓ Lawatan tapak &amp; pelan 3D percuma</span>
-        <span>✓ Urusan kelulusan PBT &amp; LPPSA / Bank</span>
-        <span>✓ Sebut harga bertulis tanpa kos tersembunyi</span>
-      </p>
-
-      <div class="mt-8 flex flex-col sm:flex-row gap-3">
-        <a href="https://wa.me/601155919344?text=Hai%20Binarumah!%20Saya%20nak%20tempah%20lawatan%20tapak%20%26%20sebut%20harga%20bina%20rumah%20di%20Selangor%2FKL."
+      <div class="mt-8 flex flex-col sm:flex-row gap-3 hero-actions">
+        <a href="https://wa.me/601155919344?text=Hai%20Binarumah!%20Saya%20nak%20semak%20kelayakan%20tanah%20%26%20bajet%20bina%20rumah%20di%20Selangor%2FKL."
            target="_blank" rel="noopener" data-lead-source="hero_lawatan_tapak"
            class="inline-flex items-center justify-center gap-2 bg-wa-600 hover:bg-wa-700 text-white font-extrabold px-6 py-4 rounded-xl shadow-pop transition">
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.3A10 10 0 1 0 12 2Z"/></svg>
-          Tempah Lawatan Tapak Percuma
+          <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.3A10 10 0 1 0 12 2Z"/></svg>
+          Semak Kelayakan Tanah &amp; Bajet
         </a>
         <a href="#kira-kos" class="inline-flex items-center justify-center gap-2 border border-white/25 text-white hover:bg-white/10 font-bold px-6 py-4 rounded-xl transition">
-          Kira Anggaran Kos 30 Saat
+          Kira Anggaran Kos (30 Saat)
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 6l6 6-6 6M19 12H5"/></svg>
         </a>
       </div>
     </div>
 
-    <dl class="mt-8 sm:mt-12 grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4 max-w-3xl">
-      <div class="bg-white/10 backdrop-blur rounded-xl p-4 border border-white/15">
-        <dt class="text-xs text-brand-100 font-semibold">Kawasan liputan</dt>
-        <dd class="font-display font-extrabold text-2xl mt-1">Selangor <span class="text-sm font-semibold text-brand-100">&amp; KL</span></dd>
+    <div class="mt-8 sm:mt-12 grid gap-3 md:grid-cols-3 max-w-4xl hero-proof">
+      <div class="hero-proof__item flex items-start gap-3 bg-white/10 backdrop-blur rounded-xl p-4 border border-white/15">
+        <span class="grid place-items-center w-10 h-10 rounded-lg bg-accent-500 text-brand-900 shrink-0">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3l7 3v6c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V6l7-3Z"/><path stroke-linecap="round" d="m9 12 2 2 4-4"/></svg>
+        </span>
+        <div>
+          <p class="font-display font-bold text-white text-[14.5px] leading-snug hero-proof__title">Jaminan Struktur 10 Tahun</p>
+          <p class="mt-1 text-[12.5px] leading-relaxed text-brand-100 hero-proof__desc">Spesifikasi bahan binaan gred SIRIM &amp; mengikut piawaian kejuruteraan.</p>
+        </div>
       </div>
-      <div class="bg-white/10 backdrop-blur rounded-xl p-4 border border-white/15">
-        <dt class="text-xs text-brand-100 font-semibold">Pendaftaran</dt>
-        <dd class="font-display font-extrabold text-2xl mt-1">CIDB <span class="text-sm font-semibold text-brand-100">&amp; SSM</span></dd>
+
+      <div class="hero-proof__item flex items-start gap-3 bg-white/10 backdrop-blur rounded-xl p-4 border border-white/15">
+        <span class="grid place-items-center w-10 h-10 rounded-lg bg-accent-500 text-brand-900 shrink-0">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 3h8l4 4v14H6z"/><path stroke-linecap="round" stroke-linejoin="round" d="M14 3v4h4"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 14 2 2 4-4"/></svg>
+        </span>
+        <div>
+          <p class="font-display font-bold text-white text-[14.5px] leading-snug hero-proof__title">Urusan PBT 100% Diuruskan</p>
+          <p class="mt-1 text-[12.5px] leading-relaxed text-brand-100 hero-proof__desc">Pengalaman mengendalikan kelulusan pelan di PBT Selangor &amp; KL serta isu tanah gambut/berbukit.</p>
+        </div>
       </div>
-      <div class="bg-white/10 backdrop-blur rounded-xl p-4 border border-white/15">
-        <dt class="text-xs text-brand-100 font-semibold">Kadar promosi</dt>
-        <dd class="font-display font-extrabold text-2xl mt-1">RM 125 <span class="text-sm font-semibold text-brand-100">/ kps</span></dd>
-        <p class="text-[11px] font-semibold text-brand-100/80 mt-0.5">Spesifikasi asas · terma tertakluk</p>
+
+      <div class="hero-proof__item flex items-start gap-3 bg-white/10 backdrop-blur rounded-xl p-4 border border-white/15">
+        <span class="grid place-items-center w-10 h-10 rounded-lg bg-accent-500 text-brand-900 shrink-0">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7 3h7l4 4v14H7z"/><path stroke-linecap="round" stroke-linejoin="round" d="M14 3v4h4"/><path stroke-linecap="round" stroke-linejoin="round" d="M10 13h5M10 17h3"/></svg>
+        </span>
+        <div>
+          <p class="font-display font-bold text-white text-[14.5px] leading-snug hero-proof__title">Kontrak &amp; Sebut Harga Telus</p>
+          <p class="mt-1 text-[12.5px] leading-relaxed text-brand-100 hero-proof__desc">Bayaran berperingkat mengikut kemajuan kerja di tapak (<em>progress claim</em>), tiada caj mengejut.</p>
+        </div>
       </div>
-      <div class="bg-white/10 backdrop-blur rounded-xl p-4 border border-white/15">
-        <dt class="text-xs text-brand-100 font-semibold">Pemeriksaan tapak</dt>
-        <dd class="font-display font-extrabold text-2xl mt-1">Percuma</dd>
-      </div>
-    </dl>
+    </div>
   </div>
 </section>
 

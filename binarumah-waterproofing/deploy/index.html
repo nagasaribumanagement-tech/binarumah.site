@@ -162,7 +162,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "name": "Berapa kos bina rumah atas tanah sendiri di Selangor pada 2026?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Anggaran pasaran 2026 bermula RM125 hingga RM400 sekaki persegi ikut tahap spesifikasi. Banglo satu tingkat 1,500 sekaki persegi pada spesifikasi premium biasanya RM270,000 hingga RM420,000, belum termasuk harga tanah, kerja landskap besar dan perabot."
+        "text": "Anggaran pasaran 2026 bermula RM125 hingga RM230 sekaki persegi ikut tahap spesifikasi. Banglo satu tingkat 1,500 sekaki persegi pada spesifikasi premium biasanya RM277,500 hingga RM345,000, manakala spesifikasi asas bermula sekitar RM187,500, belum termasuk harga tanah, kerja landskap besar dan perabot."
       }
     },
     {
@@ -273,6 +273,75 @@ html, body { overflow-x: clip; max-width: 100%; }
     .mobile-sticky-cta { display: block; }
     body.mobile-menu-open .mobile-sticky-cta { display: none; }
   }
+
+  /* Kalkulator: pastikan pilihan spesifikasi kekal 3 lajur pada semua lebar */
+  #kira-kos .grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  @media (max-width: 359px) {
+    #kira-kos .tierBtn { font-size: 11px; padding-left: 2px; padding-right: 2px; }
+  }
+
+  /* Top announcement bar: promosi waterproofing di atas navigasi utama */
+  .announce-bar {
+    background: #F0A020;
+    color: #0B1F33;
+    border-bottom: 1px solid rgba(176, 107, 0, .28);
+  }
+  .announce-bar__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .375rem;
+    padding-block: .65rem;
+    text-align: center;
+  }
+  .announce-bar__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    max-width: 100%;
+    font-size: 12.5px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none;
+  }
+  .announce-bar__link:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .announce-bar__link strong { font-weight: 800; }
+  .announce-bar__cta { font-weight: 800; white-space: nowrap; }
+  .announce-bar__phone {
+    display: none;
+    align-items: center;
+    gap: .375rem;
+    font-size: 12.5px;
+    font-weight: 700;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+  .announce-bar__phone:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  @media (min-width: 640px) {
+    .announce-bar__inner {
+      flex-direction: row;
+      justify-content: center;
+      gap: 1rem;
+      padding-block: .5rem;
+      text-align: left;
+    }
+    .announce-bar__link { font-size: 13px; }
+  }
+  @media (min-width: 1024px) {
+    .announce-bar__inner { justify-content: space-between; }
+    .announce-bar__phone { display: inline-flex; }
+  }
+  @media (max-width: 359px) {
+    .announce-bar__link { font-size: 11.5px; }
+  }
 </style>
 </head>
 
@@ -283,17 +352,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <a href="#hubungi" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-brand-900 focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Langkau ke hubungi</a>
 
-<!-- ===== TOP STRIP ===== -->
-<div class="bg-brand-900 text-brand-100 text-[13px]">
-  <div class="wrap flex items-center justify-center sm:justify-between gap-4 py-2">
-    <p class="hidden sm:flex items-center gap-2">
-      <svg class="w-4 h-4 text-accent-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.05 2.93c.3-.92 1.6-.92 1.9 0l1.07 3.29a.75.75 0 0 0 .71.52h3.46c.93 0 1.32 1.2.57 1.77l-2.8 2.04a.75.75 0 0 0-.27.72l1.07 3.29c.3.92-.75 1.69-1.54 1.12l-2.8-2.03a.75.75 0 0 0-.88 0l-2.8 2.03c-.79.57-1.84-.2-1.54-1.12l1.07-3.29a.75.75 0 0 0-.27-.72L2.1 8.51c-.75-.57-.36-1.77.57-1.77h3.46a.75.75 0 0 0 .71-.52l1.07-3.29Z"/></svg>
-      Pemeriksaan tapak &amp; sebut harga percuma — bina rumah &amp; Sistem Waterproofing di Selangor &amp; KL
-    </p>
-    <p class="flex items-center gap-2 font-semibold">
-      <span class="text-accent-400">★</span> Sebut harga percuma
-      <span class="text-brand-500">·</span> <a href="tel:+601155919344" class="hover:text-white">+60 11-5591 9344</a>
-    </p>
+<!-- ===== TOP ANNOUNCEMENT BAR: WATERPROOFING ===== -->
+<div class="announce-bar">
+  <div class="wrap announce-bar__inner">
+    <a href="/waterproofing" class="announce-bar__link">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" class="shrink-0"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11Z"/><path stroke-linecap="round" d="M9.5 14a2.5 2.5 0 0 0 2.5 2.5"/></svg>
+      <span>Masalah bumbung bocor atau bilik air tiris? Servis Waterproofing Profesional di Selangor &amp; KL bermula <strong>RM500</strong> <span class="announce-bar__cta">&rarr; Lihat Pakej</span></span>
+    </a>
+    <a href="tel:+601155919344" class="announce-bar__phone">
+      <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></svg>
+      +60 11-5591 9344
+    </a>
   </div>
 </div>
 
@@ -406,12 +475,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="wrap relative py-12 sm:py-20 lg:py-28">
     <div class="max-w-2xl">
-      <p class="eyebrow text-accent-400 mb-4">Kontraktor Rumah &amp; Sistem Waterproofing · Selangor &amp; KL</p>
+      <p class="eyebrow text-accent-400 mb-4">Kontraktor Bina Rumah Atas Tanah Sendiri · Selangor &amp; KL</p>
       <h1 class="font-display font-extrabold text-[clamp(1.9rem,5.2vw,3.35rem)] leading-[1.1]">
         Kontraktor Bina Rumah Atas Tanah Sendiri di Selangor &amp; KL
       </h1>
       <p class="mt-5 text-[17px] sm:text-xl text-brand-100 leading-relaxed">
-        Dari lukisan pelan 3D, kelulusan PBT hingga kunci di tangan — diurus satu pintu dengan sebut harga bertulis, bayaran berperingkat ikut progres tapak, dan jaminan struktur 10 tahun. (Perlukan rawatan kebocoran segera? Lihat pakej Sistem Waterproofing dari RM 500 di bawah).
+        Dari lukisan pelan 3D, kelulusan PBT hingga kunci di tangan — diurus satu pintu dengan sebut harga bertulis, bayaran berperingkat ikut progres tapak, dan jaminan struktur 10 tahun.
       </p>
 
       <p class="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-[15px] font-semibold text-accent-400">
@@ -428,7 +497,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           Tempah Lawatan Tapak Percuma
         </a>
         <a href="#kira-kos" class="inline-flex items-center justify-center gap-2 border border-white/25 text-white hover:bg-white/10 font-bold px-6 py-4 rounded-xl transition">
-          Kira Anggaran Kos
+          Kira Anggaran Kos 30 Saat
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 6l6 6-6 6M19 12H5"/></svg>
         </a>
       </div>
@@ -444,9 +513,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <dd class="font-display font-extrabold text-2xl mt-1">CIDB <span class="text-sm font-semibold text-brand-100">&amp; SSM</span></dd>
       </div>
       <div class="bg-white/10 backdrop-blur rounded-xl p-4 border border-white/15">
-        <dt class="text-xs text-brand-100 font-semibold">Waterproofing dari</dt>
-        <dd class="font-display font-extrabold text-2xl mt-1">RM 500 <span class="text-sm font-semibold text-brand-100">/ pakej</span></dd>
-        <p class="text-[11px] font-semibold text-brand-100/80 mt-0.5">Termasuk pemeriksaan tapak</p>
+        <dt class="text-xs text-brand-100 font-semibold">Kadar promosi</dt>
+        <dd class="font-display font-extrabold text-2xl mt-1">RM 125 <span class="text-sm font-semibold text-brand-100">/ kps</span></dd>
+        <p class="text-[11px] font-semibold text-brand-100/80 mt-0.5">Spesifikasi asas · terma tertakluk</p>
       </div>
       <div class="bg-white/10 backdrop-blur rounded-xl p-4 border border-white/15">
         <dt class="text-xs text-brand-100 font-semibold">Pemeriksaan tapak</dt>
@@ -674,7 +743,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         Kira Anggaran Kos Bina Rumah Anda dalam 30 Saat
       </h2>
       <p class="mt-4 text-[17px] leading-relaxed text-brand-600">
-        Masukkan keluasan binaan, bilangan bilik dan lokasi. Kami paparkan julat bajet berdasarkan harga pasaran
+        Masukkan keluasan binaan, bilangan bilik dan lokasi. Kami paparkan julat bajet berdasarkan kadar promosi rasmi
         Selangor <span class="tahunSemasa"></span> serta pecahan kos biasa. Hasil pengiraan boleh dihantar terus ke WhatsApp kami untuk sebut harga rasmi.
       </p>
     </div>
@@ -717,11 +786,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div>
             <span class="block font-bold text-brand-900 mb-2.5">Tahap spesifikasi</span>
             <div class="grid grid-cols-3 gap-1.5 sm:gap-2" role="radiogroup" aria-label="Tahap spesifikasi">
-              <button type="button" role="radio" aria-checked="false" data-tier="asas" class="tierBtn rounded-xl border-2 border-brand-100 bg-white text-brand-800 font-bold py-3 px-2 text-[13px] sm:text-[14px] transition">Asas</button>
-              <button type="button" role="radio" aria-checked="true" data-tier="premium" class="tierBtn rounded-xl border-2 border-brand-900 bg-brand-900 text-white font-bold py-3 px-2 text-[13px] sm:text-[14px] transition">Premium</button>
-              <button type="button" role="radio" aria-checked="false" data-tier="eksklusif" class="tierBtn rounded-xl border-2 border-brand-100 bg-white text-brand-800 font-bold py-3 px-2 text-[13px] sm:text-[14px] transition">Eksklusif</button>
+              <button type="button" role="radio" aria-checked="true" data-tier="asas" class="tierBtn rounded-xl border-2 border-brand-900 bg-brand-900 text-white font-bold py-3 px-2 text-[13px] sm:text-[14px] transition">Asas</button>
+              <button type="button" role="radio" aria-checked="false" data-tier="standard" class="tierBtn rounded-xl border-2 border-brand-100 bg-white text-brand-800 font-bold py-3 px-2 text-[13px] sm:text-[14px] transition">Standard</button>
+              <button type="button" role="radio" aria-checked="false" data-tier="premium" class="tierBtn rounded-xl border-2 border-brand-100 bg-white text-brand-800 font-bold py-3 px-2 text-[13px] sm:text-[14px] transition">Premium</button>
             </div>
-            <p id="tierDesc" class="mt-2.5 text-[13px] text-brand-500">Jubin 2×2, pintu Solid MDF, aluminium frames, cat deluxe, kabinet dapur standard.</p>
+            <p id="tierDesc" class="mt-2.5 text-[13px] text-brand-500">Jubin 12x12, pintu HDF, aluminium standard, cat emulsi, bumbung metal sheet biasa.</p>
           </div>
 
           <div>
@@ -739,13 +808,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <option value="0.98">Hulu Selangor / Sabak Bernam — MPHS/MPSB</option>
               <option value="1.05">Kuala Lumpur (Cheras / Ampang / Setapak / Wangsa Maju) — DBKL</option>
             </select>
-            <p class="mt-2 text-[13px] text-brand-500">Faktor lokasi mengambil kira kos pengangkutan bahan, keadaan tanah dan tempoh kelulusan majlis di kawasan tersebut.</p>
+            <p class="mt-2 text-[13px] text-brand-500">Pilihan lokasi membantu kami semak PBT dan keadaan tapak. Julat di atas menggunakan kadar promosi asas; sebarang kerja tapak tambahan akan dinyatakan dalam sebut harga bertulis.</p>
           </div>
         </div>
 
         <p class="mt-7 text-[12.5px] leading-relaxed text-brand-500">
-          Anggaran ini adalah julat pasaran untuk rujukan awal dan bukan sebut harga mengikat. Harga sebenar ditentukan selepas
-          lawatan tapak, ujian tanah dan bacaan geran.
+          Anggaran ini menggunakan kadar promosi asas mengikut spesifikasi dan bukan sebut harga mengikat. Bilangan bilik,
+          faktor lokasi dan keadaan tapak disemak semasa lawatan tapak; sebarang pelarasan dinyatakan dalam sebut harga bertulis.
         </p>
       </form>
 
@@ -753,8 +822,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <aside id="estOut" class="lg:sticky lg:top-24 bg-white border border-brand-100 rounded-2xl p-6 sm:p-8 shadow-pop">
         <div class="rounded-2xl bg-brand-900 p-5 sm:p-6 shadow-pop">
           <p class="eyebrow text-accent-400">Anggaran Bajet Anda</p>
-          <p id="rangeText" class="mt-3 font-display font-extrabold text-accent-400 text-[clamp(1.8rem,4vw,2.6rem)] leading-tight tabular-nums">RM 278,100 – RM 432,600</p>
-          <p id="rateText" class="mt-1.5 text-[15px] font-semibold text-brand-100 tabular-nums">≈ RM 185 – RM 288 / kaki persegi</p>
+          <p id="rangeText" class="mt-3 font-display font-extrabold text-accent-400 text-[clamp(1.8rem,4vw,2.6rem)] leading-tight tabular-nums">RM 187,500 – RM 217,500</p>
+          <p id="rateText" class="mt-1.5 text-[15px] font-semibold text-brand-100 tabular-nums">Kadar Asas: RM 125 – RM 145 / kps</p>
+          <p id="rateNote" class="mt-2 text-[12.5px] font-semibold text-brand-100/80">Untuk 1,500 kps · spesifikasi asas · belum termasuk kerja tapak tambahan</p>
         </div>
 
         <dl class="mt-6 grid grid-cols-2 gap-3 text-[14px]">
@@ -764,7 +834,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           <div class="bg-brand-50 rounded-xl p-3.5">
             <dt class="text-brand-500 font-semibold">Tempoh binaan</dt>
-            <dd id="outDuration" class="font-bold text-brand-900 mt-0.5">10 – 13 bulan</dd>
+            <dd id="outDuration" class="font-bold text-brand-900 mt-0.5">8 – 10 bulan</dd>
           </div>
           <div class="bg-brand-50 rounded-xl p-3.5">
             <dt class="text-brand-500 font-semibold">Kelulusan PBT</dt>
@@ -772,7 +842,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           <div class="bg-brand-50 rounded-xl p-3.5">
             <dt class="text-brand-500 font-semibold">Komitmen pinjaman*</dt>
-            <dd id="outMonthly" class="font-bold text-brand-900 tabular-nums mt-0.5">RM 1,600 / bulan</dd>
+            <dd id="outMonthly" class="font-bold text-brand-900 tabular-nums mt-0.5">RM 863 / bulan</dd>
           </div>
         </dl>
 
@@ -782,9 +852,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="mt-7 grid gap-2.5">
           <button id="waBtn" type="button" data-lead-source="kalkulator_anggaran" class="w-full inline-flex items-center justify-center gap-2 bg-wa-600 hover:bg-wa-700 text-white font-extrabold px-5 py-4 rounded-xl transition">
             <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.3A10 10 0 1 0 12 2Z"/></svg>
-            Hantar Anggaran ke WhatsApp
+            Kira &amp; Hantar Anggaran ke WhatsApp
           </button>
-          <a href="#hubungi" class="text-center text-[14px] font-bold text-brand-600 hover:text-brand-900">Atau minta lawatan tapak percuma →</a>
+          <a href="#hubungi" class="text-center text-[14px] font-bold text-brand-600 hover:text-brand-900">Atau tempah lawatan tapak percuma →</a>
         </div>
         <p class="mt-4 text-[12.5px] text-brand-500">*Kiraan anggaran untuk rujukan: 90% pembiayaan, kadar faedah 4.5%, tempoh 35 tahun. Tertakluk kepada kelulusan LPPSA atau bank.</p>
       </aside>
@@ -794,7 +864,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="mt-14">
       <h3 class="font-display font-extrabold text-brand-900 text-[clamp(1.3rem,3vw,1.8rem)]">Panduan Ringkas: Anggaran Kos Bina Rumah Selangor <span class="tahunSemasa"></span></h3>
       <p class="mt-3 text-[16px] leading-relaxed text-brand-600 max-w-3xl">
-        Julat di bawah ialah jumlah anggaran binaan atas tanah sendiri, mengikut keluasan binaan dan tahap spesifikasi. Harga kami <strong class="text-brand-800">bermula RM 125 sekaki persegi</strong> untuk spesifikasi asas.
+        Julat di bawah ialah jumlah anggaran binaan atas tanah sendiri, mengikut keluasan binaan dan tahap spesifikasi. Harga kami <strong class="text-brand-800">bermula RM 125/kps untuk spesifikasi Asas hingga RM 230/kps untuk Premium / Mewah</strong>.
         Ia belum termasuk harga tanah, kerja landskap matang, perabot dan yuran guaman atau penilaian pinjaman.
       </p>
 
@@ -805,47 +875,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <thead class="bg-brand-900 text-white">
             <tr>
               <th scope="col" class="px-5 py-4 font-display font-bold text-[14px]">Keluasan binaan</th>
-              <th scope="col" class="px-5 py-4 font-display font-bold text-[14px]">1 Tingkat · Asas<br><span class="font-semibold text-brand-100 text-[12.5px]">RM125–180/kps</span></th>
-              <th scope="col" class="px-5 py-4 font-display font-bold text-[14px]">1 Tingkat · Premium<br><span class="font-semibold text-brand-100 text-[12.5px]">RM180–280/kps</span></th>
-              <th scope="col" class="px-5 py-4 font-display font-bold text-[14px]">2 Tingkat · Asas<br><span class="font-semibold text-brand-100 text-[12.5px]">RM133–191/kps</span></th>
-              <th scope="col" class="px-5 py-4 font-display font-bold text-[14px]">2 Tingkat · Premium<br><span class="font-semibold text-brand-100 text-[12.5px]">RM191–297/kps</span></th>
+              <th scope="col" class="px-5 py-4 font-display font-bold text-[14px]">Spesifikasi Asas<br><span class="font-semibold text-brand-100 text-[12.5px]">RM125–145/kps</span></th>
+              <th scope="col" class="px-5 py-4 font-display font-bold text-[14px]">Spesifikasi Standard<br><span class="font-semibold text-brand-100 text-[12.5px]">RM150–180/kps</span></th>
+              <th scope="col" class="px-5 py-4 font-display font-bold text-[14px]">Spesifikasi Premium / Mewah<br><span class="font-semibold text-brand-100 text-[12.5px]">RM185–230/kps</span></th>
             </tr>
           </thead>
           <tbody class="divide-y divide-brand-100 bg-white text-[15px]">
             <tr class="hover:bg-brand-50">
               <th scope="row" class="px-5 py-4 font-bold text-brand-900 whitespace-nowrap">1,000 kps</th>
-              <td class="px-5 py-4 tabular-nums text-brand-700">RM 125k – 180k</td>
-              <td class="px-5 py-4 tabular-nums text-brand-700">RM 180k – 280k</td>
-              <td class="px-5 py-4 tabular-nums text-brand-700">RM 133k – 191k</td>
-              <td class="px-5 py-4 tabular-nums text-brand-700">RM 191k – 297k</td>
+              <td class="px-5 py-4 tabular-nums text-brand-700">RM 125,000 – 145,000</td>
+              <td class="px-5 py-4 tabular-nums text-brand-700">RM 150,000 – 180,000</td>
+              <td class="px-5 py-4 tabular-nums text-brand-700">RM 185,000 – 230,000</td>
             </tr>
             <tr class="hover:bg-brand-50 bg-brand-50/60">
               <th scope="row" class="px-5 py-4 font-bold text-brand-900 whitespace-nowrap">1,500 kps</th>
-              <td class="px-5 py-4 tabular-nums text-brand-700">RM 188k – 270k</td>
-              <td class="px-5 py-4 tabular-nums font-bold text-brand-900">RM 270k – 420k</td>
-              <td class="px-5 py-4 tabular-nums text-brand-700">RM 199k – 286k</td>
-              <td class="px-5 py-4 tabular-nums text-brand-700">RM 286k – 445k</td>
+              <td class="px-5 py-4 tabular-nums font-bold text-brand-900">RM 187,500 – 217,500</td>
+              <td class="px-5 py-4 tabular-nums text-brand-700">RM 225,000 – 270,000</td>
+              <td class="px-5 py-4 tabular-nums text-brand-700">RM 277,500 – 345,000</td>
             </tr>
             <tr class="hover:bg-brand-50">
               <th scope="row" class="px-5 py-4 font-bold text-brand-900 whitespace-nowrap">2,000 kps</th>
-              <td class="px-5 py-4 tabular-nums text-brand-700">RM 250k – 360k</td>
-              <td class="px-5 py-4 tabular-nums text-brand-700">RM 360k – 560k</td>
-              <td class="px-5 py-4 tabular-nums text-brand-700">RM 265k – 382k</td>
-              <td class="px-5 py-4 tabular-nums text-brand-700">RM 382k – 594k</td>
+              <td class="px-5 py-4 tabular-nums text-brand-700">RM 250,000 – 290,000</td>
+              <td class="px-5 py-4 tabular-nums text-brand-700">RM 300,000 – 360,000</td>
+              <td class="px-5 py-4 tabular-nums text-brand-700">RM 370,000 – 460,000</td>
             </tr>
             <tr class="hover:bg-brand-50 bg-brand-50/60">
               <th scope="row" class="px-5 py-4 font-bold text-brand-900 whitespace-nowrap">2,500 kps</th>
-              <td class="px-5 py-4 tabular-nums text-brand-700">RM 313k – 450k</td>
-              <td class="px-5 py-4 tabular-nums text-brand-700">RM 450k – 700k</td>
-              <td class="px-5 py-4 tabular-nums text-brand-700">RM 331k – 477k</td>
-              <td class="px-5 py-4 tabular-nums text-brand-700">RM 477k – 742k</td>
+              <td class="px-5 py-4 tabular-nums text-brand-700">RM 312,500 – 362,500</td>
+              <td class="px-5 py-4 tabular-nums text-brand-700">RM 375,000 – 450,000</td>
+              <td class="px-5 py-4 tabular-nums text-brand-700">RM 462,500 – 575,000</td>
             </tr>
           </tbody>
         </table>
       </div>
       <p class="mt-4 text-[14px] text-brand-500">
-        Tahap <strong class="text-brand-800">Eksklusif</strong> (kawasan basah batu marmar, sistem smart home, aluminium heavy-duty, bumbung metal tile,
-        facade feature) berada pada <strong class="text-brand-800">RM 280 – RM 400 sekaki persegi</strong>, iaitu kira-kira RM 420,000 – RM 600,000 untuk 1,500 kps.
+        Julat yang sama digunakan untuk banglo 1 dan 2 tingkat. Kerja tapak tambahan seperti piling, retaining wall atau
+        pengubahsuaian struktur dinilai melalui sebut harga bertulis selepas lawatan tapak. Reka bentuk khas di luar julat
+        Premium (contoh facade feature, smart home atau batu marmar) juga dinilai secara sebut harga.
       </p>
     </div>
   </div>
@@ -1125,7 +1191,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li class="flex gap-2"><span class="text-wa-600">✓</span> Pelan 3D luaran &amp; 2 dalaman</li>
           <li class="flex gap-2"><span class="text-wa-600">✓</span> Urus permohonan kelulusan PBT</li>
         </ul>
-        <a href="https://wa.me/601155919344?text=Hai%20Binarumah!%20Saya%20berminat%20dengan%20Pakej%20Pelan%20Sahaja." target="_blank" rel="noopener" class="mt-6 text-center border-2 border-brand-900 text-brand-900 hover:bg-brand-900 hover:text-white font-bold px-5 py-3 rounded-xl transition">Bincang Pakej Ini</a>
+        <a href="https://wa.me/601155919344?text=Hai%20Binarumah!%20Saya%20berminat%20dengan%20Pakej%20Pelan%20Sahaja." target="_blank" rel="noopener" class="mt-6 text-center border-2 border-brand-900 text-brand-900 hover:bg-brand-900 hover:text-white font-bold px-5 py-3 rounded-xl transition">Dapatkan Pelan Lantai Percuma</a>
       </article>
 
       <article class="reveal relative bg-brand-900 text-white rounded-2xl p-7 shadow-pop flex flex-col lg:-mt-4 lg:mb-4">
@@ -1133,7 +1199,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h3 class="font-display font-bold text-2xl">Design &amp; Build Penuh</h3>
         <p class="mt-1 text-[14px] font-semibold text-brand-100">Satu kontraktor, satu tanggungjawab</p>
         <p class="mt-3 inline-block rounded-full bg-accent-500 px-3 py-1.5 text-[12px] font-extrabold text-brand-900">Spesifikasi Premium · Siap Kunci</p>
-        <p class="mt-4 font-display font-extrabold text-3xl tabular-nums">RM 180 – 280 <span class="text-[15px] font-bold text-brand-100">/ kps</span></p>
+        <p class="mt-4 font-display font-extrabold text-3xl tabular-nums">RM 185 – 230 <span class="text-[15px] font-bold text-brand-100">/ kps</span></p>
         <ul class="mt-5 space-y-2.5 text-[15px] text-brand-100 flex-1">
           <li class="flex gap-2"><span class="text-accent-400">✓</span> Pelan, 3D &amp; kelulusan PBT diurus</li>
           <li class="flex gap-2"><span class="text-accent-400">✓</span> Ujian tanah &amp; kerja asas lengkap</li>
@@ -1141,7 +1207,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li class="flex gap-2"><span class="text-accent-400">✓</span> Laporan kemajuan mingguan</li>
           <li class="flex gap-2"><span class="text-accent-400">✓</span> Jaminan struktur 10 tahun</li>
         </ul>
-        <a href="https://wa.me/601155919344?text=Hai%20Binarumah!%20Saya%20berminat%20dengan%20Design%20%26%20Build%20Penuh." target="_blank" rel="noopener" class="mt-6 text-center bg-accent-500 hover:bg-accent-600 text-brand-900 font-extrabold px-5 py-3.5 rounded-xl transition">Dapatkan Sebut Harga</a>
+        <a href="https://wa.me/601155919344?text=Hai%20Binarumah!%20Saya%20berminat%20dengan%20Design%20%26%20Build%20Penuh." target="_blank" rel="noopener" class="mt-6 text-center bg-accent-500 hover:bg-accent-600 text-brand-900 font-extrabold px-5 py-3.5 rounded-xl transition">Semak Kelayakan Tanah &amp; Bajet</a>
       </article>
 
       <article class="reveal bg-white border border-brand-100 rounded-2xl p-7 shadow-card flex flex-col">
@@ -1153,7 +1219,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li class="flex gap-2"><span class="text-wa-600">✓</span> Tukar bumbung &amp; sistem wayar</li>
           <li class="flex gap-2"><span class="text-wa-600">✓</span> Kelulusan PBT jika melibatkan struktur</li>
         </ul>
-        <a href="https://wa.me/601155919344?text=Hai%20Binarumah!%20Saya%20berminat%20dengan%20kerja%20ubah%20suai." target="_blank" rel="noopener" class="mt-6 text-center border-2 border-brand-900 text-brand-900 hover:bg-brand-900 hover:text-white font-bold px-5 py-3 rounded-xl transition">Semak Skop Anda</a>
+        <a href="https://wa.me/601155919344?text=Hai%20Binarumah!%20Saya%20berminat%20dengan%20kerja%20ubah%20suai." target="_blank" rel="noopener" class="mt-6 text-center border-2 border-brand-900 text-brand-900 hover:bg-brand-900 hover:text-white font-bold px-5 py-3 rounded-xl transition">Semak Skop &amp; Bajet Ubah Suai</a>
       </article>
     </div>
 
@@ -1166,7 +1232,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <figcaption class="promo-card__body">
           <p class="font-display font-bold text-brand-900">Pakej 800 kps</p>
           <p class="text-[14px] text-brand-600">3 bilik tidur · 2 bilik air · pelan lantai disertakan</p>
-          <a href="https://wa.me/601155919344?text=Hai%20Binarumah!%20Saya%20berminat%20dengan%20Pakej%20800%20kps%20daripada%20Pasukan%20Binarumah." target="_blank" rel="noopener" class="inline-block font-bold text-wa-700 hover:text-wa-600">Tanya pakej ini →</a>
+          <a href="https://wa.me/601155919344?text=Hai%20Binarumah!%20Saya%20berminat%20dengan%20Pakej%20800%20kps%20daripada%20Pasukan%20Binarumah." target="_blank" rel="noopener" class="inline-block font-bold text-wa-700 hover:text-wa-600">Dapatkan Pelan Lantai Percuma →</a>
         </figcaption>
       </figure>
       <figure class="promo-card reveal">
@@ -1177,8 +1243,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p class="font-display font-bold text-brand-900">Rumah Idaman dari RM100,000</p>
           <p class="text-[14px] text-brand-600">3 bilik tidur · 2 tandas · ±750 kps · Selangor</p>
           <p class="mt-2 inline-block rounded-full bg-brand-100 px-3 py-1.5 text-[11px] font-extrabold text-brand-700">Pakej Ekonomi · Spesifikasi Asas</p>
-          <p class="mt-2 text-[12.5px] text-brand-500">(Anggaran spesifikasi asas ±750 kps pada kadar ~RM133/kps, tertakluk kepada keadaan tapak)</p>
-          <a href="https://wa.me/601155919344?text=Hai%20Binarumah!%20Saya%20berminat%20dengan%20promosi%20RM100%2C000%20daripada%20Pasukan%20Binarumah." target="_blank" rel="noopener" class="inline-block font-bold text-wa-700 hover:text-wa-600">Tanya promosi ini →</a>
+          <p class="mt-2 text-[12.5px] text-brand-500">(Anggaran spesifikasi asas ±750 kps pada kadar ~RM125–145/kps, tertakluk kepada keadaan tapak)</p>
+          <a href="https://wa.me/601155919344?text=Hai%20Binarumah!%20Saya%20berminat%20dengan%20promosi%20RM100%2C000%20daripada%20Pasukan%20Binarumah." target="_blank" rel="noopener" class="inline-block font-bold text-wa-700 hover:text-wa-600">Semak Kelayakan Tanah &amp; Bajet →</a>
         </figcaption>
       </figure>
       <figure class="promo-card reveal">
@@ -1189,7 +1255,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p class="font-display font-bold text-brand-900">Serendah RM125/kps</p>
           <p class="mt-2 inline-block rounded-full bg-brand-100 px-3 py-1.5 text-[11px] font-extrabold text-brand-700">Pakej Ekonomi · Spesifikasi Asas</p>
           <p class="mt-2 text-[14px] text-brand-600">Tertakluk pada reka bentuk, spesifikasi dan keadaan tapak</p>
-          <a href="https://wa.me/601155919344?text=Hai%20Binarumah!%20Saya%20berminat%20dengan%20promosi%20RM125%20sekaki%20persegi." target="_blank" rel="noopener" class="inline-block font-bold text-wa-700 hover:text-wa-600">Tanya promosi ini →</a>
+          <a href="https://wa.me/601155919344?text=Hai%20Binarumah!%20Saya%20berminat%20dengan%20promosi%20RM125%20sekaki%20persegi." target="_blank" rel="noopener" class="inline-block font-bold text-wa-700 hover:text-wa-600">Semak Kelayakan Tanah &amp; Bajet →</a>
         </figcaption>
       </figure>
     </div>
@@ -1239,7 +1305,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span class="chev shrink-0 text-accent-600 text-2xl leading-none mt-0.5" aria-hidden="true">+</span>
         </summary>
         <div class="px-6 pb-6 text-[15.5px] leading-relaxed text-brand-600 space-y-3">
-          <p>Anggaran pasaran 2026 <strong class="text-brand-800">bermula RM 125 hingga RM 400 sekaki persegi</strong> bergantung kepada tahap spesifikasi. Banglo satu tingkat 1,500 kps pada spesifikasi premium biasanya <strong class="text-brand-800">RM 270,000 hingga RM 420,000</strong>, manakala rumah spesifikasi asas boleh disiapkan dari <strong class="text-brand-800">RM 187,500</strong>.</p>
+          <p>Anggaran pasaran 2026 <strong class="text-brand-800">bermula RM 125 hingga RM 230 sekaki persegi</strong> bergantung kepada tahap spesifikasi. Banglo satu tingkat 1,500 kps pada spesifikasi premium biasanya <strong class="text-brand-800">RM 277,500 hingga RM 345,000</strong>, manakala rumah spesifikasi asas boleh disiapkan dari <strong class="text-brand-800">RM 187,500</strong>.</p>
           <p>Yang paling menaikkan harga ialah keadaan tanah (piling atau raft slab), jarak dari kawasan pembekal, dan pilihan kemasan seperti batu marmar, aluminium heavy-duty atau sistem smart home.</p>
         </div>
       </details>
@@ -1377,7 +1443,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="bg-white text-brand-800 rounded-2xl p-6 sm:p-8 shadow-pop">
       <h3 class="font-display font-bold text-brand-900 text-xl">Mohon Sebut Harga Percuma</h3>
-      <p class="mt-1.5 text-[14.5px] text-brand-500">Borang ini membuka WhatsApp dengan butiran anda sudah terisi — tiada sebarang data dihantar ke pelayan.</p>
+      <p class="mt-1.5 text-[14.5px] text-brand-500">Butiran anda dibawa ke WhatsApp — pasukan kami akan kira anggaran dan hantar sebut harga bertulis. Tiada data dihantar ke pelayan.</p>
 
       <form id="leadForm" class="mt-6 grid sm:grid-cols-2 gap-4" novalidate>
         <div class="sm:col-span-2">
@@ -1422,11 +1488,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="sm:col-span-2 grid gap-2.5">
           <button type="submit" class="w-full inline-flex items-center justify-center gap-2 bg-wa-600 hover:bg-wa-700 text-white font-extrabold px-5 py-4 rounded-xl transition">
-            Hantar via WhatsApp
+            Kira &amp; Hantar Anggaran ke WhatsApp
           </button>
           <p id="leadMsg" role="status" class="text-[13.5px] font-bold text-accent-700 min-h-[1.25rem]"></p>
         </div>
         <p class="sm:col-span-2 text-[12.5px] text-brand-500">Dengan menghantar, anda bersetuju kami menghubungi anda mengenai sebut harga ini sahaja. Kami tidak berkongsi nombor anda dengan pihak ketiga. Baca <a href="/privacy" class="underline" target="_blank" rel="noopener">Dasar Privasi</a> dan <a href="/terms" class="underline" target="_blank" rel="noopener">Terma &amp; Syarat</a>.</p>
+        <p class="sm:col-span-2 text-[12px] leading-relaxed text-brand-500"><strong class="text-brand-700">Binarumah.site &amp; NSM Design Build</strong> adalah jenama rasmi di bawah kendalian <strong class="text-brand-700">Nagasaribu Consultancy (JR0190942-A)</strong> — Portal Rasmi: <a href="https://nagasaribu.online" target="_blank" rel="noopener" class="underline hover:text-brand-900">nagasaribu.online</a>.</p>
       </form>
     </div>
   </div>
@@ -1445,8 +1512,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         Kontraktor bina rumah atas tanah sendiri, lukisan pelan 3D, urusan kelulusan PBT, ubah suai rumah dan servis waterproofing di seluruh Selangor &amp; KL.
       </p>
       <ul class="mt-5 space-y-1.5 text-[13.5px] font-semibold">
-        <li>Dikendalikan oleh Nagasaribu Consultancy (JR0190942-A) — anak syarikat di bawah nagasaribu.online</li>
-        <li>Portal: <a href="https://nagasaribu.online" target="_blank" rel="noopener" class="underline hover:text-white">nagasaribu.online</a></li>
+        <li>Binarumah.site &amp; NSM Design Build adalah jenama rasmi di bawah kendalian <strong class="text-white">Nagasaribu Consultancy (JR0190942-A)</strong> — Portal Rasmi: <a href="https://nagasaribu.online" target="_blank" rel="noopener" class="underline hover:text-white">nagasaribu.online</a></li>
         <li>Telefon: <a href="tel:+601155919344" class="hover:text-white">+60 11-5591 9344</a></li>
         <li>Pejabat: Prima Seri Gombak, 68100 Batu Caves, Selangor</li>
         <li>Kawasan liputan: Selangor &amp; Kuala Lumpur sahaja</li>
@@ -1590,20 +1656,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     return 'https://wa.me/' + WA_NUMBER.replace(/[^0-9]/g, '');
   }
 
-  // Harga pasaran Selangor 2026 (RM/kaki persegi) ikut tahap spesifikasi.
+  // Kadar promosi rasmi (RM/kaki persegi) ikut tahap spesifikasi.
+  // Julat ini sama dengan jadual harga di halaman utama dan sengaja tidak
+  // didarab dengan faktor tersembunyi supaya paparan kekal telus.
   var RATES = {
-    asas:       [125, 180],
-    premium:    [180, 280],
-    eksklusif:  [280, 400]
+    asas:      [125, 145],
+    standard:  [150, 180],
+    premium:   [185, 230]
+  };
+  var TIER_LABEL = {
+    asas: 'Asas',
+    standard: 'Standard',
+    premium: 'Premium / Mewah'
   };
   var TIER_DESC = {
     asas: 'Jubin 12x12, pintu HDF, aluminium standard, cat emulsi, bumbung metal sheet biasa.',
-    premium: 'Jubin 2x2, pintu Solid MDF, aluminium frames, cat deluxe, kabinet dapur standard.',
-    eksklusif: 'Batu marmar kawasan basah, aluminium heavy-duty, metal tile roofing, smart wiring, facade feature.'
+    standard: 'Jubin 2x2, pintu Solid MDF, aluminium frames, cat deluxe, kabinet dapur standard.',
+    premium: 'Batu marmar kawasan basah, aluminium heavy-duty, metal tile roofing, smart wiring, facade feature.'
   };
-  var STOREY_FACTOR = { '1': 1.00, '2': 1.06 };
 
-  var state = { sqft: 1500, storey: '1', beds: 3, tier: 'premium', district: 1.03 };
+  var state = { sqft: 1500, storey: '1', beds: 3, tier: 'asas' };
 
   var el = {
     sqftNum: document.getElementById('sqft'),
@@ -1613,6 +1685,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     district: document.getElementById('district'),
     rangeText: document.getElementById('rangeText'),
     rateText: document.getElementById('rateText'),
+    rateNote: document.getElementById('rateNote'),
     outSqft: document.getElementById('outSqft'),
     outDuration: document.getElementById('outDuration'),
     outPbt: document.getElementById('outPbt'),
@@ -1639,12 +1712,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     return Math.round(n / 1000).toLocaleString('en-MY') + 'k';
   }
 
-  // Faktor bilik tidur: rumah dengan lebih bilik cenderung lebih kompleks.
-  function bedFactor(beds) {
-    var b = Math.min(beds, 5);
-    return 1 + Math.max(0, b - 3) * 0.02; // 3 bilik = 1.00 · 5+ bilik = 1.04
-  }
-
   // Kadar faedah pinjaman standard: RM per 100,000 / bulan, 4.5%, 35 tahun.
   function monthlyPer100k() {
     var r = 0.045 / 12, n = 35 * 12, P = 100000;
@@ -1654,13 +1721,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   function calc() {
     var lo = RATES[state.tier][0], hi = RATES[state.tier][1];
-    var f = STOREY_FACTOR[state.storey] * bedFactor(state.beds) * state.district;
-    var low = state.sqft * lo * f;
-    var high = state.sqft * hi * f;
+    var low = state.sqft * lo;
+    var high = state.sqft * hi;
     var mid = (low + high) / 2;
 
     el.rangeText.textContent = fmtRM(low) + ' – ' + fmtRM(high);
-    el.rateText.textContent = '≈ RM ' + Math.round(low / state.sqft) + ' – RM ' + Math.round(high / state.sqft) + ' / kaki persegi';
+    el.rateText.textContent = 'Kadar ' + TIER_LABEL[state.tier] + ': RM ' + lo + ' – RM ' + hi + ' / kps';
+    el.rateNote.textContent = 'Untuk ' + state.sqft.toLocaleString('en-MY') + ' kps · spesifikasi ' +
+      TIER_LABEL[state.tier].toLowerCase() + ' · belum termasuk kerja tapak tambahan';
     el.outSqft.textContent = state.sqft.toLocaleString('en-MY') + ' kps · ' + state.storey + ' tingkat';
 
     // Tempoh binaan (bulan) mengikut keluasan & tingkat
@@ -1690,11 +1758,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   function waLink() {
     var r = calc();
-    var districtName = el.district.options[el.district.selectedIndex].text.split(' — ')[0];
+    var districtName = el.district.options[el.district.selectedIndex].text.split('—')[0].trim();
     var msg = 'Hai Binarumah! Saya baru kira anggaran kos:%0A' +
       '- Keluasan: ' + state.sqft.toLocaleString('en-MY') + ' kps (' + state.storey + ' tingkat)%0A' +
       '- Bilik tidur: ' + state.beds + '%0A' +
-      '- Spesifikasi: ' + state.tier.charAt(0).toUpperCase() + state.tier.slice(1) + '%0A' +
+      '- Spesifikasi: ' + TIER_LABEL[state.tier] + '%0A' +
+      '- Kadar: RM ' + RATES[state.tier][0] + '–' + RATES[state.tier][1] + '/kps%0A' +
       '- Lokasi: ' + districtName + '%0A' +
       '- Anggaran: ' + fmtRM(r.low).replace(/ /g, '%20') + ' – ' + fmtRM(r.high).replace(/ /g, '%20') + '%0A%0A' +
       'Boleh atur lawatan tapak percuma?';
@@ -1742,7 +1811,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
 
     el.beds.addEventListener('change', function (e) { state.beds = parseInt(e.target.value, 10); calc(); });
-    el.district.addEventListener('change', function (e) { state.district = parseFloat(e.target.value); calc(); });
     el.waBtn.addEventListener('click', function () { var u = waLink(); if (u) window.open(u, '_blank', 'noopener'); });
 
     calc();
